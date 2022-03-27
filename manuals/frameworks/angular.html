@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angular &mdash; documentación de La Docu 🏠 - </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="prev" title="¡Bienvenido La Docu!" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> La Docu 🏠
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Frameworks</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Angular</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-angular-y-porque-elegirlo">Que es Angular y porque elegirlo?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalar-node">Instalar Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion-de-angular">Instalación de angular</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#crear-una-aplicacion">Crear una aplicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-de-un-proyecto-en-angular">Estructura de un proyecto en Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conceptos-basicos-de-typescript">Conceptos básicos de typescript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comunicacion-de-datos-en-angular">Comunicación de datos en Angular</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#string-interpolation">String Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#property-binding">Property Binding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#event-binding">Event Binding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-binging">Data Binging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-control-en-angular">Estructuras de control en Angular</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ngif">ngIf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ngfor">ngFor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ngswitch">ngSwitch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estilos-en-angular">Estilos en Angular</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-class-styles">Dynamic class &amp; Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ngclass-ngstyle">NgClass &amp; NgStyle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#crear-un-formulario">Crear un Formulario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-con-firebase">Deployment con firebase</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">La Docu 🏠</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Angular</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/manuals/frameworks/angular.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="¡Bienvenido La Docu!" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="angular">
+<h1>Angular<a class="headerlink" href="#angular" title="Enlazar permanentemente con este título"></a></h1>
+<a class="reference internal image-reference" href="https://angular.io/assets/images/logos/angular/angular.svg"><img alt="Logo Angular" class="align-center" src="https://angular.io/assets/images/logos/angular/angular.svg" width="400px" /></a>
+<div class="contents local topic" id="table-de-contenidos-de-la-pagina">
+<p class="topic-title">Table de contenidos de la pagina</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#que-es-angular-y-porque-elegirlo" id="id26">Que es Angular y porque elegirlo?</a></p></li>
+<li><p><a class="reference internal" href="#instalacion" id="id27">Instalación</a></p>
+<ul>
+<li><p><a class="reference internal" href="#instalar-node" id="id28">Instalar Node</a></p></li>
+<li><p><a class="reference internal" href="#instalacion-de-angular" id="id29">Instalación de angular</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#crear-una-aplicacion" id="id30">Crear una aplicación</a></p></li>
+<li><p><a class="reference internal" href="#estructura-de-un-proyecto-en-angular" id="id31">Estructura de un proyecto en Angular</a></p></li>
+<li><p><a class="reference internal" href="#conceptos-basicos-de-typescript" id="id32">Conceptos básicos de typescript</a></p></li>
+<li><p><a class="reference internal" href="#comunicacion-de-datos-en-angular" id="id33">Comunicación de datos en Angular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#string-interpolation" id="id34">String Interpolation</a></p></li>
+<li><p><a class="reference internal" href="#property-binding" id="id35">Property Binding</a></p></li>
+<li><p><a class="reference internal" href="#event-binding" id="id36">Event Binding</a></p></li>
+<li><p><a class="reference internal" href="#data-binging" id="id37">Data Binging</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estructuras-de-control-en-angular" id="id38">Estructuras de control en Angular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ngif" id="id39">ngIf</a></p></li>
+<li><p><a class="reference internal" href="#ngfor" id="id40">ngFor</a></p></li>
+<li><p><a class="reference internal" href="#ngswitch" id="id41">ngSwitch</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#estilos-en-angular" id="id42">Estilos en Angular</a></p>
+<ul>
+<li><p><a class="reference internal" href="#dynamic-class-styles" id="id43">Dynamic class &amp; Styles</a></p></li>
+<li><p><a class="reference internal" href="#ngclass-ngstyle" id="id44">NgClass &amp; NgStyle</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#crear-un-formulario" id="id45">Crear un Formulario</a></p></li>
+<li><p><a class="reference internal" href="#deployment-con-firebase" id="id46">Deployment con firebase</a></p></li>
+</ul>
+</div>
+<section id="que-es-angular-y-porque-elegirlo">
+<h2><a class="toc-backref" href="#id26">Que es Angular y porque elegirlo?</a><a class="headerlink" href="#que-es-angular-y-porque-elegirlo" title="Enlazar permanentemente con este título"></a></h2>
+<p>Angular mas que un framework se considera toda una plataforma, con módulos y paquetes listo para utilizar en una aplicación.</p>
+<ul class="simple">
+<li><p>Forms</p></li>
+<li><p>PWA</p></li>
+<li><p>Language Services</p></li>
+<li><p>Router</p></li>
+<li><p>Elements</p></li>
+<li><p>CDK</p></li>
+<li><p>Universal</p></li>
+<li><p>Compiler</p></li>
+<li><p>i18n</p></li>
+<li><p>Http</p></li>
+<li><p>Material</p></li>
+<li><p>CLI</p></li>
+</ul>
+<p>Angular se reconocer por tener un gran rendimiento en las aplicaciones.
+También podemos tener aplicaciones multiplataforma (llevándolas a electron, native script, ionic)
+Ademas angular tiene una gran comunidad.</p>
+</section>
+<section id="instalacion">
+<h2><a class="toc-backref" href="#id27">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título"></a></h2>
+<section id="instalar-node">
+<h3><a class="toc-backref" href="#id28">Instalar Node</a><a class="headerlink" href="#instalar-node" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para empezar a trabajar con Angular necesitamos tener instalado <strong>Node.js</strong> para ellos podemos ir a <a class="reference external" href="https://nodejs.org/">la pagina de node</a>.
+Lo mas recomendable es instalar la ultima version LTS (Long Term Support)</p>
+<p>También si necesitamos una version particular podemos instalar una version particular utilizando el software para manejo de versiones <strong>nvm</strong>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/coreybutler/nvm-windows">Version para Windows</a></p></li>
+<li><p><a class="reference external" href="https://github.com/nvm-sh/nvm">Version para linux/mac/WSL</a></p></li>
+</ul>
+<p>Luego con el siguiente comando podemos ver que version de node tenemos:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">node -v</span>
+</pre></div>
+</div>
+<p>También con el siguiente comando podemos ver que version de npm (instalador de paquetes de node) tenemos:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm -v</span>
+</pre></div>
+</div>
+</section>
+<section id="instalacion-de-angular">
+<h3><a class="toc-backref" href="#id29">Instalación de angular</a><a class="headerlink" href="#instalacion-de-angular" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para instalar el framework de angular tenemos que hacer uso del siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm i -g @angular/cli</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Este comando nos instala la ultima version del framework disponible. Si queremos una version en particular podemos utilizar el mismo comando agregando un <strong>&#64;</strong> para especificar la version. <strong>Ejemplo: npm i -g &#64;angular/cli&#64;12.1.2</strong></p>
+</div>
+<p>Para verificar la version del CLI que tenemos instalada ejecutamos el siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng version</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="crear-una-aplicacion">
+<h2><a class="toc-backref" href="#id30">Crear una aplicación</a><a class="headerlink" href="#crear-una-aplicacion" title="Enlazar permanentemente con este título"></a></h2>
+<p>Para crear una aplicación vamos al directorio donde se va a generar la estructura de directorios de angular y usamos el siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng new my-project</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Especificamos que nuestra aplicación tenga <strong>routing</strong> y elegimos el preprocesador que utilicemos, el mas común es <strong>SCSS</strong>
+Automáticamente angular nos alista un proyecto listo para trabajar.</p>
+</div>
+<p>Luego entramos a la carpeta de nuestro proyecto y ejecutamos el siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng serve -o</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Este comando nos genera un servidor de desarrollo en localhost en el puerto 4200 por defecto.</p></li>
+<li><p>La opción -o nos permite abrir el servidor de desarrollo directamente en nuestro navegador predeterminado.</p></li>
+<li><p>La opción –port=3500 nos permite abrir el servidor de desarrollo pero en el puerto 3500.</p></li>
+<li><p>Para matar el proceso de la terminal podemos usar el comando <strong>ctrl + c</strong>.</p></li>
+</ul>
+</div>
+<p>Si volvemos a Ejecutar el comando ng version dentro de la carpeta de nuestro proyecto obtenemos la información de que dependencia y versiones tiene nuestro proyecto</p>
+</section>
+<section id="estructura-de-un-proyecto-en-angular">
+<h2><a class="toc-backref" href="#id31">Estructura de un proyecto en Angular</a><a class="headerlink" href="#estructura-de-un-proyecto-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Archivo/ Directorio</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>src/</p></td>
+<td><p>Aquí Esta el corazón de la aplicación (Componentes, html, css, routing)</p></td>
+</tr>
+<tr class="row-odd"><td><p>.browserslistrc</p></td>
+<td><p>En que versiones del navegador tiene que ser compatibles la aplicación</p></td>
+</tr>
+<tr class="row-even"><td><p>.editorconfig</p></td>
+<td><p>Para escribir reglas de escritores de trabajo en equipo (Plugin editor config)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>tsconfig.json      | Configuración de que tiene angular con typescript. Compilación, versiones de typScript, donde transpile los archivos</p></td>
+</tr>
+<tr class="row-even"><td><p>angular.json</p></td>
+<td><p>Se puede manejar diferentes ambientes (Staging, QA, Production) También configuraciones de compilación, tamaños de la aplicación, etc</p></td>
+</tr>
+<tr class="row-odd"><td><p>karma.conf.json</p></td>
+<td><p>Configuración para correr pruebas unitarias.</p></td>
+</tr>
+<tr class="row-even"><td><p>package.json</p></td>
+<td><p>Aquí tenemos los scripts, las versiones que estamos manejando</p></td>
+</tr>
+<tr class="row-odd"><td><p>.nvm</p></td>
+<td><p>Este archivo deberíamos añadir para especificar la version de node que estamos utilizando</p></td>
+</tr>
+</tbody>
+</table>
+<p>Para mejorar la experiencia de desarrollo hay una extension para vscode y otros editores de código llamada <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Angular.ng-template">Angular Language Service</a>.</p>
+</section>
+<section id="conceptos-basicos-de-typescript">
+<h2><a class="toc-backref" href="#id32">Conceptos básicos de typescript</a><a class="headerlink" href="#conceptos-basicos-de-typescript" title="Enlazar permanentemente con este título"></a></h2>
+<p>TypeScript puede inferir tipos como por ejemplo:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s1">&#39;Hola Mundo&#39;</span>
+</pre></div>
+</div>
+<p>Pero con Typescript puedo asegurarme el tipado de la variable para asegurarme:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">userName</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;Hola Mundo&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Esto evitaría cometer errores de querer agregar a la variable <strong>userName</strong> el valor 1 por ejemplo.</p></li>
+<li><p>El tipado puede corregir hasta el 60% de 🐛bugs que cometemos como desarrolladores.</p></li>
+</ul>
+</div>
+<p>También es posible indicar que una variable es de 2 tipos</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">userName</span>: <span class="kt">string</span> <span class="o">|</span> <span class="kt">number</span> <span class="o">=</span> <span class="s1">&#39;Hola Mundo&#39;</span>
+</pre></div>
+</div>
+<p>También se puede proteger a las funciones con un tipado. Lo cual nos da un feedback temprano de que tipos de valores espera la función:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">b</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ademas nos permite crear clases de una manera mas simple pasando de esto:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Person</span><span class="p">{</span>
+    <span class="nx">age</span>: <span class="kt">number</span>
+    <span class="nx">lastName</span>: <span class="kt">string</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">age</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">lastName</span>: <span class="kt">string</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">nico</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Person</span><span class="p">(</span><span class="mf">28</span><span class="p">,</span> <span class="s1">&#39;Mendoza&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A esto:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Person</span><span class="p">{</span>
+    <span class="kr">constructor</span><span class="p">(</span><span class="k">public</span> <span class="nx">age</span>: <span class="kt">number</span><span class="p">,</span> <span class="k">public</span> <span class="nx">lastName</span>: <span class="kt">string</span><span class="p">){}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">nico</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Person</span><span class="p">(</span><span class="mf">28</span><span class="p">,</span> <span class="s1">&#39;Mendoza&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comunicacion-de-datos-en-angular">
+<h2><a class="toc-backref" href="#id33">Comunicación de datos en Angular</a><a class="headerlink" href="#comunicacion-de-datos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<section id="string-interpolation">
+<h3><a class="toc-backref" href="#id34">String Interpolation</a><a class="headerlink" href="#string-interpolation" title="Enlazar permanentemente con este título"></a></h3>
+<p>Es la forma que nosotros desde nuestra lógica escrita en TypeScript podemos pasar datos a la renderizar a nuestro template.
+Es la forma en que nosotros con doble llaves podemos poner una expresión dentro de ella como una función o una variable que este en TypeScript.</p>
+<p>Por ejemplo:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id1" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Nicolás&#39;</span>
+    <span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span>
+    <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://angular.io/assets/images/logos/angular/angular.svg&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Para poder renderizar las variables del TypeScript de nuestro componente tienen que ser de acceso publico 🔓</p>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id2" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ &#39;Hola Mundo &#39;.repeat(5) }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> 3 + 3 =  {{ 3 + 3 }} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Hola soy {{ name }} y tengo {{ age }} años<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">{{url}}</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;img&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="property-binding">
+<h3><a class="toc-backref" href="#id35">Property Binding</a><a class="headerlink" href="#property-binding" title="Enlazar permanentemente con este título"></a></h3>
+<p>Es la forma en la que podemos modificar atributos desde el controlador, y mandar a los atributos en el HTML.
+Por ejemplo: El tag de una imagen, el href de un link, el estado de un botón</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id3" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Nicolás&#39;</span>
+    <span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span>
+    <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://angular.io/assets/images/logos/angular/angular.svg&#39;</span>
+    <span class="nx">btnDisabled</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id4" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="p">[</span><span class="na">disabled</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;btnDisabled&quot;</span><span class="p">&gt;</span> Enviar <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">[</span><span class="na">value</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">progress</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="p">[</span><span class="na">value</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;age&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">progress</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="p">[</span><span class="na">src</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;img&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El string interpolation nos sirve mas para ingresar contenido como en párrafos, h1, h2, etc.
+El Property Binding son específicamente para propiedades. Es recomendable para valores que no son un string.</p>
+</div>
+</section>
+<section id="event-binding">
+<h3><a class="toc-backref" href="#id36">Event Binding</a><a class="headerlink" href="#event-binding" title="Enlazar permanentemente con este título"></a></h3>
+<p>Sirve para ejecutar una función que definamos en el componente desde el template.
+El evento que queremos capturar esta encerrado entre paréntesis.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id5" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">btnDisabled</span> <span class="o">=</span> <span class="kc">true</span>
+
+    <span class="nx">toggleButton</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">btnDisabled</span> <span class="o">=</span> <span class="o">!</span> <span class="k">this</span><span class="p">.</span><span class="nx">btnDisabled</span>
+    <span class="p">}</span>
+
+    <span class="nx">onScroll</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">Event</span><span class="p">){</span>
+        <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="kr">as</span> <span class="nx">HTMLElement</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">strollTop</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="nx">changeName</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">Event</span><span class="p">){</span>
+        <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="kr">as</span> <span class="nx">HTMLInputElement</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Código SCSS</span><a class="headerlink" href="#id6" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.box</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">200px</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">200px</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">overflow</span><span class="nd">:</span><span class="w"> </span><span class="nt">auto</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id7" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="p">[</span><span class="na">disabled</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;btnDisabled&quot;</span><span class="p">&gt;</span> Enviar <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="p">(</span><span class="na">click</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;toggleButton()&quot;</span><span class="p">&gt;</span> Toggle Button<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box&quot;</span> <span class="p">(</span><span class="na">scroll</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;onScroll($event)&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem..<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">[</span><span class="na">value</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">(</span><span class="na">keyup</span><span class="p">)</span><span class="o">=</span><span class="s">changeName($event)</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Nombre: <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los eventos que son nativos del html o DOM los enviamos con <strong>$event</strong></p>
+</div>
+</section>
+<section id="data-binging">
+<h3><a class="toc-backref" href="#id37">Data Binging</a><a class="headerlink" href="#data-binging" title="Enlazar permanentemente con este título"></a></h3>
+<p>Es una fusion entre escuchar un evento con <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Binding</span></code> y <code class="docutils literal notranslate"><span class="pre">setear</span> <span class="pre">una</span> <span class="pre">propiedad</span></code> (En angular utilizamos el <code class="docutils literal notranslate"><span class="pre">NgModel</span></code>)</p>
+<p>Sirve mucho para los input, siempre esta pendiente del estado del input, si el campo es valido o no y sincroniza el valor.</p>
+<p>También Nos permite saber si una propiedad es valida utilizando un <strong>#template</strong></p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id8" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Nicolás&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id9" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Nombre <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">required</span> <span class="p">#</span><span class="na">nameInput</span><span class="o">=</span><span class="s">&quot;ngModel&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Valid: <span class="cp">{{</span> <span class="nv">nameInput.valid</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Para poder habilitar el <strong>NgModel</strong> tenemos que ir a <strong>app,.modules.ts</strong>, importar el modulo <strong>FormsModule</strong> y colocar lo en el array de imports.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id10" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">FromsModules</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/forms&#39;</span>
+
+<span class="kd">@NgModule</span><span class="p">({</span>
+  <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span>
+      <span class="nx">AppComponent</span>
+  <span class="p">],</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span>
+      <span class="nx">BrowserModule</span><span class="p">,</span>
+      <span class="nx">AppRoutingModule</span><span class="p">,</span>
+      <span class="nx">FromsModules</span>
+  <span class="p">],</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">bootstrap</span><span class="o">:</span> <span class="p">[</span><span class="nx">AppComponent</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="estructuras-de-control-en-angular">
+<h2><a class="toc-backref" href="#id38">Estructuras de control en Angular</a><a class="headerlink" href="#estructuras-de-control-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<section id="ngif">
+<h3><a class="toc-backref" href="#id39">ngIf</a><a class="headerlink" href="#ngif" title="Enlazar permanentemente con este título"></a></h3>
+<p>Tenemos la directiva <strong>ngIf</strong> la cual, si se cumple la condición booleana del contenido, se renderiza el elemento html.</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id11" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name === &#39;Nicolas&#39;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>También se puede utilizar else en la condición:</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id12" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name === &#39;Nicolas&#39;; else myBlock&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ng-template</span> <span class="p">#</span><span class="na">myBlock</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Bloque de else<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ngfor">
+<h3><a class="toc-backref" href="#id40">ngFor</a><a class="headerlink" href="#ngfor" title="Enlazar permanentemente con este título"></a></h3>
+<p>La directiva <strong>ngFor</strong> la cual nos sirve para iterar un array. También nos permite utilizar el indice o posición de cada elemento del array.</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id13" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">names</span>: <span class="kt">string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nicolás&#39;</span><span class="p">,</span> <span class="s1">&#39;Julian&#39;</span><span class="p">,</span> <span class="s1">&#39;Santiago&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id14" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">li</span> <span class="p">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let name of names; index as i&quot;</span><span class="p">&gt;</span>
+     <span class="cp">{{</span> <span class="nv">i</span> <span class="cp">}}</span> <span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span>
+ <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ng-template</span> <span class="p">#</span><span class="na">myBlock</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Bloque de else<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>No se pueden iterar objetos, solo se iteran arrays. Si queremos iterar arrays de objetos podemos definir interfaces.</p>
+</div>
+</section>
+<section id="ngswitch">
+<h3><a class="toc-backref" href="#id41">ngSwitch</a><a class="headerlink" href="#ngswitch" title="Enlazar permanentemente con este título"></a></h3>
+<p>Esta directiva nos sirve para no tener que hacer tantas cadenas de ngIf.
+Se escribe como un Data Binding y cada case como una estructura de control.</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id15" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="p">[</span><span class="na">ngSwitch</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;nicolas&#39;&quot;</span><span class="p">&gt;</span>La persona es Nicolas<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;julian&#39;&quot;</span><span class="p">&gt;</span>La person a es Julian<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;camilo&#39;&quot;</span><span class="p">&gt;</span>La person a es Camilo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">p</span> <span class="p">*</span><span class="na">ngSwitchDefault</span><span class="p">&gt;</span>No hace match<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="estilos-en-angular">
+<h2><a class="toc-backref" href="#id42">Estilos en Angular</a><a class="headerlink" href="#estilos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<p>En angular tenemos un archivo con extension <strong>.scss</strong> donde podemos poner nuestros estilos y utilizarlos en el componente que necesitemos.</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Código SCSS</span><a class="headerlink" href="#id16" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">products</span><span class="o">--</span><span class="n">grid</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="n">flex</span><span class="o">-</span><span class="n">direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="n">div</span> <span class="p">{</span>
+        <span class="n">img</span> <span class="p">{</span>
+            <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+            <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">h2</span><span class="p">,</span> <span class="n">p</span><span class="p">{</span>
+            <span class="n">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@media</span> <span class="n">screen</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">min</span><span class="o">-</span><span class="n">width</span><span class="p">:</span> <span class="mi">40</span><span class="n">em</span><span class="p">){</span>
+    <span class="n">products</span><span class="o">--</span><span class="n">grid</span><span class="p">{</span>
+         <span class="n">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+         <span class="n">grid</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="n">columns</span><span class="p">:</span> <span class="n">repeat</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="n">fr</span><span class="p">);</span>
+         <span class="n">grid</span><span class="o">-</span><span class="n">gap</span><span class="p">:</span> <span class="mi">15</span><span class="n">px</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id17" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;products--grid&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">div</span> <span class="p">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let product of product&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">img</span> <span class="p">[</span><span class="na">src</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;product.image&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;img&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">product.price</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="cp">{{</span> <span class="nv">product.name</span> <span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<section id="dynamic-class-styles">
+<h3><a class="toc-backref" href="#id43">Dynamic class &amp; Styles</a><a class="headerlink" href="#dynamic-class-styles" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para hacer estilos dinámicos necesitamos poner la <strong>Property Binding</strong> class seguida de un punto y el nombre de la clase que queremos añadir si la condición se cumple <code class="docutils literal notranslate"><span class="pre">[class.nombre_clase]=&quot;condition&quot;</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Código SCSS</span><a class="headerlink" href="#id18" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.message-error</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">white</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">opacity</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">transition</span><span class="nd">:</span><span class="w"> </span><span class="nt">all</span><span class="w"> </span><span class="nt">linear</span><span class="w"> </span><span class="nc">.5s</span><span class="o">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">&amp;</span><span class="nc">.invalid</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">opacity</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nd">:</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id19" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">required</span> <span class="p">#</span><span class="na">nameInput</span><span class="o">=</span><span class="s">&quot;ngModel&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;message-error&quot;</span> <span class="p">[</span><span class="na">class.invalid</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;nameInput.invalid&quot;</span> <span class="p">&gt;</span>El campo es requerido<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Si queremos modificar el estilo directamente de algo en particular, necesitamos poner una <strong>Property Binding</strong> style seguida de un punto y el nombre del estilo que queremos modificar seguida del valor que le queremos asignar, este puede contener una expresión ternaria <code class="docutils literal notranslate"><span class="pre">[style.nombre_estilo]=&quot;valor_estilo&quot;</span></code>. (Es un estilo inline)</p>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id20" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="p">[</span><span class="na">style.font-style</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;nameInput.invalid ? &#39;italic&#39;: &#39;normal&#39; &quot;</span><span class="p">&gt;</span>texto texto texto<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si queremos modificar los estilos de una etiqueta html antes de definir el valor de la condición por ejemplo el valor de <strong>ngModel</strong> nos va a dar un error.</p>
+</div>
+</section>
+<section id="ngclass-ngstyle">
+<h3><a class="toc-backref" href="#id44">NgClass &amp; NgStyle</a><a class="headerlink" href="#ngclass-ngstyle" title="Enlazar permanentemente con este título"></a></h3>
+<p><strong>NgClass</strong> sirve para agrupar todos los estilos dinámicos [class] de la siguiente manera:</p>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id21" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">hr</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;line-error&quot;</span>
+     <span class="p">[</span><span class="n">ngClass</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;{</span>
+         <span class="s1">&#39;valid&#39;</span><span class="p">:</span> <span class="n">nameInput</span><span class="o">.</span><span class="n">valid</span><span class="p">,</span>
+         <span class="s1">&#39;invalid&#39;</span><span class="p">:</span> <span class="n">nameInput</span><span class="o">.</span><span class="n">invalid</span>
+     <span class="p">}</span><span class="s2">&quot;/&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><strong>NgStyle</strong> podemos agrupar todos los estilo en linea de la siguiente manera:</p>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id22" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">box</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Nicolás&#39;</span><span class="p">,</span>
+        <span class="nx">height</span>: <span class="kt">100</span><span class="p">,</span>
+        <span class="nx">background</span><span class="o">:</span> <span class="s1">&#39;red&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id23" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="p">[</span><span class="n">ngStyle</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;{</span>
+   <span class="s1">&#39;width.px&#39;</span><span class="p">:</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+   <span class="s1">&#39;height.px&#39;</span><span class="p">:</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+   <span class="s1">&#39;background-color&#39;</span><span class="p">:</span> <span class="n">box</span><span class="o">.</span><span class="n">background</span><span class="p">,</span>
+   <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="s1">&#39;block&#39;</span>
+ <span class="p">}</span><span class="s2">&quot;&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="crear-un-formulario">
+<h2><a class="toc-backref" href="#id45">Crear un Formulario</a><a class="headerlink" href="#crear-un-formulario" title="Enlazar permanentemente con este título"></a></h2>
+<p>Para crear un formulario en Angular utilizamos la directiva <strong>ngForm</strong>. Cuando se presione el botón de enviar formulario se invocara a la función asignada al <strong>ngsubmit</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id24" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="kd">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+    <span class="nx">register</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="nx">password</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id25" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span>  <span class="p">(</span><span class="na">ngSubmit</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;onRegister()&quot;</span> <span class="p">#</span><span class="na">myForm</span><span class="o">=</span><span class="s">&quot;ngForm&quot;</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;input.group&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Nombre<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">required</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;register.name&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Mensajes de Error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;input.group&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>Email<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">required</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;register.email&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Mensajes de Error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;input.group&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">required</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;register.password&quot;</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Mensajes de Error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+ <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+ <span class="p">&lt;</span><span class="nt">button</span> <span class="p">[</span><span class="na">disabled</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;myForm.invalid&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">&gt;</span>Registrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>A los botones dentro de formularios es necesario ponerles un type del tipo <strong>button</strong> para evitar que los tome del tipo <strong>submit</strong> y se envié el formulario de forma involuntaria.</p>
+</div>
+</section>
+<section id="deployment-con-firebase">
+<h2><a class="toc-backref" href="#id46">Deployment con firebase</a><a class="headerlink" href="#deployment-con-firebase" title="Enlazar permanentemente con este título"></a></h2>
+<p>Los pasos para subir un proyecto en firebase son los siguientes</p>
+<ol class="arabic simple">
+<li><p>Ir a firebase.google.com</p></li>
+<li><p>Crear una cuenta de GMail y hacer LogIn</p></li>
+<li><p>Ir a la consola de desarrollo</p></li>
+<li><p>Seleccionar nuevo proyecto</p></li>
+<li><p>Colocar el nombre de nuestro proyecto</p></li>
+<li><p>Le podemos agregar google analytics</p></li>
+<li><p>Seguimos en continuar</p></li>
+<li><p>Seleccionamos build Hosting y le damos empezar</p></li>
+<li><p>Seguir los 3 pasos que nos indica Firebase</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm install -g firebase-tools</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">firebase -V</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">firebase login</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">firebase init</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si deseamos crear los archivos de firebase en el directorio actual</p></li>
+<li><p>Que servicios queremos utilizar –&gt; hosting: configure files</p></li>
+<li><p>Queremos crear un proyecto o usar existente –&gt; user an existing</p></li>
+<li><p>Lista de nuestros proyectos –&gt; el que creamos al inicio</p></li>
+<li><p>Que carpeta queremos publicar –&gt; ponemos public por defecto</p></li>
+<li><p>Reescribir url para single page application –&gt; yes</p></li>
+<li><p>Queremos habilitar deployment con github actions –&gt; No</p></li>
+<li><p>Borramos el directorio public</p></li>
+<li><p>Crea los archivos de firebase</p></li>
+</ul>
+<ol class="arabic simple" start="10">
+<li><p>Compilar nuestro proyecto ng build –&gt; crea directorio dist/nombre_proyecto</p></li>
+<li><p>Cambiamos el parámetro public del archivo firebase.json por el directorio anterior</p></li>
+<li><p>Ultimo paso de firebase ejecutar –&gt; firebase deploy</p></li>
+<li><p>Listo nos devuelve la URL de nuestro proyecto</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="¡Bienvenido La Docu!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Mendoza Nicolás.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
