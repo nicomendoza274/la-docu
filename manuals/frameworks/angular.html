@@ -75,6 +75,18 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#crear-un-formulario">Crear un Formulario</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deployment-con-firebase">Deployment con firebase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#componentes-en-angular">Componentes en Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ciclo-de-vida-en-angular">Ciclo de vida en Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importa-fuentes-en-angular">Importa fuentes en Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#servicios">Servicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inyeccion-de-dependencias">Inyección de dependencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#angular-http">Angular Http</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipes">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directivas">Directivas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reactividad-basica">Reactividad Básica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linters-en-angular">Linters en Angular</a></li>
 </ul>
 </li>
 </ul>
@@ -111,43 +123,55 @@
 <div class="contents local topic" id="table-de-contenidos-de-la-pagina">
 <p class="topic-title">Table de contenidos de la pagina</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#que-es-angular-y-porque-elegirlo" id="id26">Que es Angular y porque elegirlo?</a></p></li>
-<li><p><a class="reference internal" href="#instalacion" id="id27">Instalación</a></p>
+<li><p><a class="reference internal" href="#que-es-angular-y-porque-elegirlo" id="id49">Que es Angular y porque elegirlo?</a></p></li>
+<li><p><a class="reference internal" href="#instalacion" id="id50">Instalación</a></p>
 <ul>
-<li><p><a class="reference internal" href="#instalar-node" id="id28">Instalar Node</a></p></li>
-<li><p><a class="reference internal" href="#instalacion-de-angular" id="id29">Instalación de angular</a></p></li>
+<li><p><a class="reference internal" href="#instalar-node" id="id51">Instalar Node</a></p></li>
+<li><p><a class="reference internal" href="#instalacion-de-angular" id="id52">Instalación de angular</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#crear-una-aplicacion" id="id30">Crear una aplicación</a></p></li>
-<li><p><a class="reference internal" href="#estructura-de-un-proyecto-en-angular" id="id31">Estructura de un proyecto en Angular</a></p></li>
-<li><p><a class="reference internal" href="#conceptos-basicos-de-typescript" id="id32">Conceptos básicos de typescript</a></p></li>
-<li><p><a class="reference internal" href="#comunicacion-de-datos-en-angular" id="id33">Comunicación de datos en Angular</a></p>
+<li><p><a class="reference internal" href="#crear-una-aplicacion" id="id53">Crear una aplicación</a></p></li>
+<li><p><a class="reference internal" href="#estructura-de-un-proyecto-en-angular" id="id54">Estructura de un proyecto en Angular</a></p></li>
+<li><p><a class="reference internal" href="#conceptos-basicos-de-typescript" id="id55">Conceptos básicos de typescript</a></p></li>
+<li><p><a class="reference internal" href="#comunicacion-de-datos-en-angular" id="id56">Comunicación de datos en Angular</a></p>
 <ul>
-<li><p><a class="reference internal" href="#string-interpolation" id="id34">String Interpolation</a></p></li>
-<li><p><a class="reference internal" href="#property-binding" id="id35">Property Binding</a></p></li>
-<li><p><a class="reference internal" href="#event-binding" id="id36">Event Binding</a></p></li>
-<li><p><a class="reference internal" href="#data-binging" id="id37">Data Binging</a></p></li>
+<li><p><a class="reference internal" href="#string-interpolation" id="id57">String Interpolation</a></p></li>
+<li><p><a class="reference internal" href="#property-binding" id="id58">Property Binding</a></p></li>
+<li><p><a class="reference internal" href="#event-binding" id="id59">Event Binding</a></p></li>
+<li><p><a class="reference internal" href="#data-binging" id="id60">Data Binging</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#estructuras-de-control-en-angular" id="id38">Estructuras de control en Angular</a></p>
+<li><p><a class="reference internal" href="#estructuras-de-control-en-angular" id="id61">Estructuras de control en Angular</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ngif" id="id39">ngIf</a></p></li>
-<li><p><a class="reference internal" href="#ngfor" id="id40">ngFor</a></p></li>
-<li><p><a class="reference internal" href="#ngswitch" id="id41">ngSwitch</a></p></li>
+<li><p><a class="reference internal" href="#ngif" id="id62">ngIf</a></p></li>
+<li><p><a class="reference internal" href="#ngfor" id="id63">ngFor</a></p></li>
+<li><p><a class="reference internal" href="#ngswitch" id="id64">ngSwitch</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#estilos-en-angular" id="id42">Estilos en Angular</a></p>
+<li><p><a class="reference internal" href="#estilos-en-angular" id="id65">Estilos en Angular</a></p>
 <ul>
-<li><p><a class="reference internal" href="#dynamic-class-styles" id="id43">Dynamic class &amp; Styles</a></p></li>
-<li><p><a class="reference internal" href="#ngclass-ngstyle" id="id44">NgClass &amp; NgStyle</a></p></li>
+<li><p><a class="reference internal" href="#dynamic-class-styles" id="id66">Dynamic class &amp; Styles</a></p></li>
+<li><p><a class="reference internal" href="#ngclass-ngstyle" id="id67">NgClass &amp; NgStyle</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#crear-un-formulario" id="id45">Crear un Formulario</a></p></li>
-<li><p><a class="reference internal" href="#deployment-con-firebase" id="id46">Deployment con firebase</a></p></li>
+<li><p><a class="reference internal" href="#crear-un-formulario" id="id68">Crear un Formulario</a></p></li>
+<li><p><a class="reference internal" href="#deployment-con-firebase" id="id69">Deployment con firebase</a></p></li>
+<li><p><a class="reference internal" href="#componentes-en-angular" id="id70">Componentes en Angular</a></p></li>
+<li><p><a class="reference internal" href="#inputs" id="id71">Inputs</a></p></li>
+<li><p><a class="reference internal" href="#output" id="id72">Output</a></p></li>
+<li><p><a class="reference internal" href="#ciclo-de-vida-en-angular" id="id73">Ciclo de vida en Angular</a></p></li>
+<li><p><a class="reference internal" href="#importa-fuentes-en-angular" id="id74">Importa fuentes en Angular</a></p></li>
+<li><p><a class="reference internal" href="#servicios" id="id75">Servicios</a></p></li>
+<li><p><a class="reference internal" href="#inyeccion-de-dependencias" id="id76">Inyección de dependencias</a></p></li>
+<li><p><a class="reference internal" href="#angular-http" id="id77">Angular Http</a></p></li>
+<li><p><a class="reference internal" href="#pipes" id="id78">Pipes</a></p></li>
+<li><p><a class="reference internal" href="#directivas" id="id79">Directivas</a></p></li>
+<li><p><a class="reference internal" href="#reactividad-basica" id="id80">Reactividad Básica</a></p></li>
+<li><p><a class="reference internal" href="#linters-en-angular" id="id81">Linters en Angular</a></p></li>
 </ul>
 </div>
 <section id="que-es-angular-y-porque-elegirlo">
-<h2><a class="toc-backref" href="#id26">Que es Angular y porque elegirlo?</a><a class="headerlink" href="#que-es-angular-y-porque-elegirlo" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id49">Que es Angular y porque elegirlo?</a><a class="headerlink" href="#que-es-angular-y-porque-elegirlo" title="Enlazar permanentemente con este título"></a></h2>
 <p>Angular mas que un framework se considera toda una plataforma, con módulos y paquetes listo para utilizar en una aplicación.</p>
 <ul class="simple">
 <li><p>Forms</p></li>
@@ -168,9 +192,9 @@ También podemos tener aplicaciones multiplataforma (llevándolas a electron, na
 Ademas angular tiene una gran comunidad.</p>
 </section>
 <section id="instalacion">
-<h2><a class="toc-backref" href="#id27">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id50">Instalación</a><a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título"></a></h2>
 <section id="instalar-node">
-<h3><a class="toc-backref" href="#id28">Instalar Node</a><a class="headerlink" href="#instalar-node" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id51">Instalar Node</a><a class="headerlink" href="#instalar-node" title="Enlazar permanentemente con este título"></a></h3>
 <p>Para empezar a trabajar con Angular necesitamos tener instalado <strong>Node.js</strong> para ellos podemos ir a <a class="reference external" href="https://nodejs.org/">la pagina de node</a>.
 Lo mas recomendable es instalar la ultima version LTS (Long Term Support)</p>
 <p>También si necesitamos una version particular podemos instalar una version particular utilizando el software para manejo de versiones <strong>nvm</strong>.</p>
@@ -188,7 +212,7 @@ Lo mas recomendable es instalar la ultima version LTS (Long Term Support)</p>
 </div>
 </section>
 <section id="instalacion-de-angular">
-<h3><a class="toc-backref" href="#id29">Instalación de angular</a><a class="headerlink" href="#instalacion-de-angular" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id52">Instalación de angular</a><a class="headerlink" href="#instalacion-de-angular" title="Enlazar permanentemente con este título"></a></h3>
 <p>Para instalar el framework de angular tenemos que hacer uso del siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">npm i -g @angular/cli</span>
 </pre></div>
@@ -204,7 +228,7 @@ Lo mas recomendable es instalar la ultima version LTS (Long Term Support)</p>
 </section>
 </section>
 <section id="crear-una-aplicacion">
-<h2><a class="toc-backref" href="#id30">Crear una aplicación</a><a class="headerlink" href="#crear-una-aplicacion" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id53">Crear una aplicación</a><a class="headerlink" href="#crear-una-aplicacion" title="Enlazar permanentemente con este título"></a></h2>
 <p>Para crear una aplicación vamos al directorio donde se va a generar la estructura de directorios de angular y usamos el siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng new my-project</span>
 </pre></div>
@@ -230,7 +254,7 @@ Automáticamente angular nos alista un proyecto listo para trabajar.</p>
 <p>Si volvemos a Ejecutar el comando ng version dentro de la carpeta de nuestro proyecto obtenemos la información de que dependencia y versiones tiene nuestro proyecto</p>
 </section>
 <section id="estructura-de-un-proyecto-en-angular">
-<h2><a class="toc-backref" href="#id31">Estructura de un proyecto en Angular</a><a class="headerlink" href="#estructura-de-un-proyecto-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id54">Estructura de un proyecto en Angular</a><a class="headerlink" href="#estructura-de-un-proyecto-en-angular" title="Enlazar permanentemente con este título"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 13%" />
@@ -251,7 +275,8 @@ Automáticamente angular nos alista un proyecto listo para trabajar.</p>
 <tr class="row-even"><td><p>.editorconfig</p></td>
 <td><p>Para escribir reglas de escritores de trabajo en equipo (Plugin editor config)</p></td>
 </tr>
-<tr class="row-odd"><td colspan="2"><p>tsconfig.json      | Configuración de que tiene angular con typescript. Compilación, versiones de typScript, donde transpile los archivos</p></td>
+<tr class="row-odd"><td><p>tsconfig.json</p></td>
+<td><p>Configuración de que tiene angular con typescript. Compilación, versiones de typScript, donde transpile los archivos</p></td>
 </tr>
 <tr class="row-even"><td><p>angular.json</p></td>
 <td><p>Se puede manejar diferentes ambientes (Staging, QA, Production) También configuraciones de compilación, tamaños de la aplicación, etc</p></td>
@@ -270,7 +295,7 @@ Automáticamente angular nos alista un proyecto listo para trabajar.</p>
 <p>Para mejorar la experiencia de desarrollo hay una extension para vscode y otros editores de código llamada <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Angular.ng-template">Angular Language Service</a>.</p>
 </section>
 <section id="conceptos-basicos-de-typescript">
-<h2><a class="toc-backref" href="#id32">Conceptos básicos de typescript</a><a class="headerlink" href="#conceptos-basicos-de-typescript" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id55">Conceptos básicos de typescript</a><a class="headerlink" href="#conceptos-basicos-de-typescript" title="Enlazar permanentemente con este título"></a></h2>
 <p>TypeScript puede inferir tipos como por ejemplo:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">userName</span> <span class="o">=</span> <span class="s1">&#39;Hola Mundo&#39;</span>
 </pre></div>
@@ -320,9 +345,9 @@ Automáticamente angular nos alista un proyecto listo para trabajar.</p>
 </div>
 </section>
 <section id="comunicacion-de-datos-en-angular">
-<h2><a class="toc-backref" href="#id33">Comunicación de datos en Angular</a><a class="headerlink" href="#comunicacion-de-datos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id56">Comunicación de datos en Angular</a><a class="headerlink" href="#comunicacion-de-datos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
 <section id="string-interpolation">
-<h3><a class="toc-backref" href="#id34">String Interpolation</a><a class="headerlink" href="#string-interpolation" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id57">String Interpolation</a><a class="headerlink" href="#string-interpolation" title="Enlazar permanentemente con este título"></a></h3>
 <p>Es la forma que nosotros desde nuestra lógica escrita en TypeScript podemos pasar datos a la renderizar a nuestro template.
 Es la forma en que nosotros con doble llaves podemos poner una expresión dentro de ella como una función o una variable que este en TypeScript.</p>
 <p>Por ejemplo:</p>
@@ -351,7 +376,7 @@ Es la forma en que nosotros con doble llaves podemos poner una expresión dentro
 </div>
 </section>
 <section id="property-binding">
-<h3><a class="toc-backref" href="#id35">Property Binding</a><a class="headerlink" href="#property-binding" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id58">Property Binding</a><a class="headerlink" href="#property-binding" title="Enlazar permanentemente con este título"></a></h3>
 <p>Es la forma en la que podemos modificar atributos desde el controlador, y mandar a los atributos en el HTML.
 Por ejemplo: El tag de una imagen, el href de un link, el estado de un botón</p>
 <div class="literal-block-wrapper docutils container" id="id3">
@@ -381,7 +406,7 @@ El Property Binding son específicamente para propiedades. Es recomendable para 
 </div>
 </section>
 <section id="event-binding">
-<h3><a class="toc-backref" href="#id36">Event Binding</a><a class="headerlink" href="#event-binding" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id59">Event Binding</a><a class="headerlink" href="#event-binding" title="Enlazar permanentemente con este título"></a></h3>
 <p>Sirve para ejecutar una función que definamos en el componente desde el template.
 El evento que queremos capturar esta encerrado entre paréntesis.</p>
 <div class="literal-block-wrapper docutils container" id="id5">
@@ -437,7 +462,7 @@ El evento que queremos capturar esta encerrado entre paréntesis.</p>
 </div>
 </section>
 <section id="data-binging">
-<h3><a class="toc-backref" href="#id37">Data Binging</a><a class="headerlink" href="#data-binging" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id60">Data Binging</a><a class="headerlink" href="#data-binging" title="Enlazar permanentemente con este título"></a></h3>
 <p>Es una fusion entre escuchar un evento con <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Binding</span></code> y <code class="docutils literal notranslate"><span class="pre">setear</span> <span class="pre">una</span> <span class="pre">propiedad</span></code> (En angular utilizamos el <code class="docutils literal notranslate"><span class="pre">NgModel</span></code>)</p>
 <p>Sirve mucho para los input, siempre esta pendiente del estado del input, si el campo es valido o no y sincroniza el valor.</p>
 <p>También Nos permite saber si una propiedad es valida utilizando un <strong>#template</strong></p>
@@ -483,9 +508,9 @@ El evento que queremos capturar esta encerrado entre paréntesis.</p>
 </section>
 </section>
 <section id="estructuras-de-control-en-angular">
-<h2><a class="toc-backref" href="#id38">Estructuras de control en Angular</a><a class="headerlink" href="#estructuras-de-control-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id61">Estructuras de control en Angular</a><a class="headerlink" href="#estructuras-de-control-en-angular" title="Enlazar permanentemente con este título"></a></h2>
 <section id="ngif">
-<h3><a class="toc-backref" href="#id39">ngIf</a><a class="headerlink" href="#ngif" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id62">ngIf</a><a class="headerlink" href="#ngif" title="Enlazar permanentemente con este título"></a></h3>
 <p>Tenemos la directiva <strong>ngIf</strong> la cual, si se cumple la condición booleana del contenido, se renderiza el elemento html.</p>
 <div class="literal-block-wrapper docutils container" id="id11">
 <div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id11" title="Enlace permanente a este código fuente"></a></div>
@@ -506,7 +531,7 @@ El evento que queremos capturar esta encerrado entre paréntesis.</p>
 </div>
 </section>
 <section id="ngfor">
-<h3><a class="toc-backref" href="#id40">ngFor</a><a class="headerlink" href="#ngfor" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id63">ngFor</a><a class="headerlink" href="#ngfor" title="Enlazar permanentemente con este título"></a></h3>
 <p>La directiva <strong>ngFor</strong> la cual nos sirve para iterar un array. También nos permite utilizar el indice o posición de cada elemento del array.</p>
 <div class="literal-block-wrapper docutils container" id="id13">
 <div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id13" title="Enlace permanente a este código fuente"></a></div>
@@ -536,7 +561,7 @@ El evento que queremos capturar esta encerrado entre paréntesis.</p>
 </div>
 </section>
 <section id="ngswitch">
-<h3><a class="toc-backref" href="#id41">ngSwitch</a><a class="headerlink" href="#ngswitch" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id64">ngSwitch</a><a class="headerlink" href="#ngswitch" title="Enlazar permanentemente con este título"></a></h3>
 <p>Esta directiva nos sirve para no tener que hacer tantas cadenas de ngIf.
 Se escribe como un Data Binding y cada case como una estructura de control.</p>
 <div class="literal-block-wrapper docutils container" id="id15">
@@ -553,7 +578,7 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 </section>
 </section>
 <section id="estilos-en-angular">
-<h2><a class="toc-backref" href="#id42">Estilos en Angular</a><a class="headerlink" href="#estilos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id65">Estilos en Angular</a><a class="headerlink" href="#estilos-en-angular" title="Enlazar permanentemente con este título"></a></h2>
 <p>En angular tenemos un archivo con extension <strong>.scss</strong> donde podemos poner nuestros estilos y utilizarlos en el componente que necesitemos.</p>
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-text">Código SCSS</span><a class="headerlink" href="#id16" title="Enlace permanente a este código fuente"></a></div>
@@ -594,7 +619,7 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 </div>
 </div>
 <section id="dynamic-class-styles">
-<h3><a class="toc-backref" href="#id43">Dynamic class &amp; Styles</a><a class="headerlink" href="#dynamic-class-styles" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id66">Dynamic class &amp; Styles</a><a class="headerlink" href="#dynamic-class-styles" title="Enlazar permanentemente con este título"></a></h3>
 <p>Para hacer estilos dinámicos necesitamos poner la <strong>Property Binding</strong> class seguida de un punto y el nombre de la clase que queremos añadir si la condición se cumple <code class="docutils literal notranslate"><span class="pre">[class.nombre_clase]=&quot;condition&quot;</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="id18">
 <div class="code-block-caption"><span class="caption-text">Código SCSS</span><a class="headerlink" href="#id18" title="Enlace permanente a este código fuente"></a></div>
@@ -632,7 +657,7 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 </div>
 </section>
 <section id="ngclass-ngstyle">
-<h3><a class="toc-backref" href="#id44">NgClass &amp; NgStyle</a><a class="headerlink" href="#ngclass-ngstyle" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id67">NgClass &amp; NgStyle</a><a class="headerlink" href="#ngclass-ngstyle" title="Enlazar permanentemente con este título"></a></h3>
 <p><strong>NgClass</strong> sirve para agrupar todos los estilos dinámicos [class] de la siguiente manera:</p>
 <div class="literal-block-wrapper docutils container" id="id21">
 <div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id21" title="Enlace permanente a este código fuente"></a></div>
@@ -671,7 +696,7 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 </section>
 </section>
 <section id="crear-un-formulario">
-<h2><a class="toc-backref" href="#id45">Crear un Formulario</a><a class="headerlink" href="#crear-un-formulario" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id68">Crear un Formulario</a><a class="headerlink" href="#crear-un-formulario" title="Enlazar permanentemente con este título"></a></h2>
 <p>Para crear un formulario en Angular utilizamos la directiva <strong>ngForm</strong>. Cuando se presione el botón de enviar formulario se invocara a la función asignada al <strong>ngsubmit</strong>.</p>
 <div class="literal-block-wrapper docutils container" id="id24">
 <div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id24" title="Enlace permanente a este código fuente"></a></div>
@@ -714,7 +739,7 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 </div>
 </section>
 <section id="deployment-con-firebase">
-<h2><a class="toc-backref" href="#id46">Deployment con firebase</a><a class="headerlink" href="#deployment-con-firebase" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id69">Deployment con firebase</a><a class="headerlink" href="#deployment-con-firebase" title="Enlazar permanentemente con este título"></a></h2>
 <p>Los pasos para subir un proyecto en firebase son los siguientes</p>
 <ol class="arabic simple">
 <li><p>Ir a firebase.google.com</p></li>
@@ -756,6 +781,582 @@ Se escribe como un Data Binding y cada case como una estructura de control.</p>
 <li><p>Ultimo paso de firebase ejecutar –&gt; firebase deploy</p></li>
 <li><p>Listo nos devuelve la URL de nuestro proyecto</p></li>
 </ol>
+</section>
+<section id="componentes-en-angular">
+<h2><a class="toc-backref" href="#id70">Componentes en Angular</a><a class="headerlink" href="#componentes-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es la parte mas importante y el bloque principal para desarrollar en Angular.
+No es buena practica tener toda la lógica y la aplicación en un solo archivo.
+Abstraemos toda la lógica en varios componentes con responsabilidades únicas y estilos apropiados</p>
+<p>Los componentes en Angular tienen <strong>4</strong> archivos :</p>
+<ul class="simple">
+<li><p>La <strong>Vista o template</strong> html</p></li>
+<li><p>Los <strong>estilos</strong> css, scss o less</p></li>
+<li><p>Un archivo para hacer <strong>pruebas</strong> spec.ts</p></li>
+<li><p>Un archivo que tienen toda la <strong>lógica</strong> y une los anteriores component.ts</p></li>
+</ul>
+<p>El comando para crear un componente es:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng g c nombre_componente</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>La <strong>g</strong> es por generate y la <strong>c</strong> por componentes</p></li>
+<li><p>Es recomendable crear los componentes en una directorio <strong>components/</strong></p></li>
+<li><p>El CLI de Angular modifica el archivo <code class="docutils literal notranslate"><span class="pre">app.module.ts</span></code>.</p></li>
+</ul>
+</div>
+<p>«Cada componente debe pertenecer a un modulo, y no a mas de uno.»</p>
+<p>El archivo <code class="docutils literal notranslate"><span class="pre">component.ts</span></code> de un componente esta formado por varias partes.</p>
+<p>Utiliza un decorador <code class="docutils literal notranslate"><span class="pre">&#64;Component</span></code> :  Que especifica a Angular como debe comportarse la clase y enlaza los archivos de template y estilos y especifica el selector</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>selector:</strong> manera en que vamos a utilizar el componente dentro de otros elementos</p></li>
+<li><p><strong>templateUrl:</strong> Archivo enlazado de la vista</p></li>
+<li><p><strong>styleUrls:</strong> Archivo de estilos enlazado</p></li>
+</ul>
+</div></blockquote>
+<p>Los componentes usan el nombre del <strong>selector</strong> para ser llamados como <strong>tags</strong> en el HTML de otro <strong>Component</strong>.</p>
+</section>
+<section id="inputs">
+<h2><a class="toc-backref" href="#id71">Inputs</a><a class="headerlink" href="#inputs" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es un <strong>Decorador</strong> que nos permite compartir datos entre un <strong>componente padre</strong> hacia un <strong>componente hijo</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/Input.png"><img alt="Inputs" class="align-center" src="../../_images/Input.png" style="width: 400px;" /></a>
+<p>Para ello en el <strong>componente hijo</strong> importamos <code class="docutils literal notranslate"><span class="pre">Input</span></code> y lo colocamos como decorador <code class="docutils literal notranslate"><span class="pre">&#64;Input()</span></code> en la variable de la siguiente manera:</p>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id26" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">Input</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span>
+</span>
+<span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ejemploComponent</span> <span class="p">{</span>
+<span class="hll">    <span class="kd">@Input</span><span class="p">()</span> <span class="nx">variable</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;valor inicial&#39;</span>
+</span>
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Para enviar el valor desde el componente padre escribimos lo siguiente</p>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id27" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">app-ejemplo</span> <span class="na">variable</span><span class="o">=</span><span class="s">&quot;Texto del padre al hijo&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">app-ejemplo</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>También podemos hacer esto de forma dinámica utilizando ngModel</p>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id28" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">[(</span><span class="na">ngModel</span><span class="p">)]</span><span class="o">=</span><span class="s">&quot;valor&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">app-ejemplo</span> <span class="p">[</span><span class="na">variable</span><span class="p">]</span><span class="o">=</span><span class="s">&quot;valor&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">app-ejemplo</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Desde el <strong>.ts</strong> del componente padre:</p>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id29" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">padreComponent</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">valor</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;Texto del padre al hijo&#39;</span>
+</span>
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="output">
+<h2><a class="toc-backref" href="#id72">Output</a><a class="headerlink" href="#output" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es un <strong>Decorador</strong> que nos permite compartir datos entre un <strong>componente hijo</strong> hacia un <strong>componente padre</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/output.png"><img alt="Outputs" class="align-center" src="../../_images/output.png" style="width: 400px;" /></a>
+<p>Para ello en el <strong>componente hijo</strong> importamos <code class="docutils literal notranslate"><span class="pre">Output</span></code> y <code class="docutils literal notranslate"><span class="pre">EventEmitter</span></code> (especificamos el tipo) y lo colocamos como decorador <code class="docutils literal notranslate"><span class="pre">&#64;Output()</span></code> en la variable de la siguiente manera:</p>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id30" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">EventEmitter</span><span class="p">,</span> <span class="nx">Output</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span>
+</span>
+<span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ejemploComponent</span> <span class="p">{</span>
+<span class="hll">    <span class="kd">@Output</span><span class="p">()</span> <span class="nx">variableOutput</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">EventEmitter</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">()</span>
+</span>
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="nx">ejemploClick</span><span class="p">(</span>
+<span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">variableOutput</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;valor del hijo al padre&#39;</span><span class="p">)</span>
+</span>    <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>En el HTML del <strong>componente hijo</strong> ponemos un evento que genere la llamada de nuestra función para enviar el valor al padre</p>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id31" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="p">(</span><span class="na">click</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;ejemploClick()&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>En el HTML del <strong>componente padre</strong> ponemos la variable como una <strong>Property Binding</strong> y una función para obtener el evento que del hijo.</p>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id32" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">app-ejemplo</span> <span class="p">(</span><span class="na">variableOutput</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;onEjecute($event)&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">app-ejemplo</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>y por ultimo en el archivo <strong>.ts</strong> del <strong>componente padre</strong> escribimos la función que nos trae el valor del hijo.</p>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id33" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">padreComponent</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="hll">    <span class="nx">onEjecute</span><span class="p">(</span><span class="nx">variableOutput</span>: <span class="kt">string</span><span class="p">){</span>
+</span>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variableOutput</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ciclo-de-vida-en-angular">
+<h2><a class="toc-backref" href="#id73">Ciclo de vida en Angular</a><a class="headerlink" href="#ciclo-de-vida-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<p>Por cada momento del ciclo de vida de un componente en Angular, tenemos una acción y en la cual podemos correr ciertos eventos.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Constructor:</span></span></dt>
+<dd></dd></dl>
+
+<ul class="simple">
+<li><p>Es el que crea la instancia del componente.</p></li>
+<li><p>Correr antes que el render del html.</p></li>
+<li><p>No correr cosas asíncronas aquí (peticiones a servidor, suscripción, o fetch).</p></li>
+<li><p>Corre solo una vez.</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ngOnChanges():</span></span></dt>
+<dd></dd></dl>
+
+<ul class="simple">
+<li><p>Correr antes que el render del html y durante la vida del componente.</p></li>
+<li><p>Su objetivo es actualizar los cambios en los Inputs.</p></li>
+<li><p>Corre muchas veces (las que actualicemos los Inputs del componente).</p></li>
+<li><p>Podemos usar un atributo del tipo <code class="docutils literal notranslate"><span class="pre">SimpleChanges</span></code> para escuchar todos los Inputs.</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ngOnInit():</span></span></dt>
+<dd></dd></dl>
+
+<ul class="simple">
+<li><p>Correr antes de renderizar el html.</p></li>
+<li><p>Aquí si podemos correr cosas async - fetch - llamadas API - promesas.</p></li>
+<li><p>Corre una sola vez.</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ngAfterViewInit():</span></span></dt>
+<dd></dd></dl>
+
+<ul class="simple">
+<li><p>Corre después de renderizar el html.</p></li>
+<li><p>Es para manejar los hijos del componente (sus componentes del html que ya se aparecieron en el navegador).</p></li>
+</ul>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ngDestroy():</span></span></dt>
+<dd></dd></dl>
+
+<ul class="simple">
+<li><p>Se corre cuando eliminamos el componente.</p></li>
+<li><p>Cuando usamos un ngIf y remueve de la interfaz.</p></li>
+<li><p>Algunos eventos siguen existiendo aun asi se elimina el componente. Hay que eliminar todos los eventos que quedan en memoria.</p></li>
+</ul>
+</section>
+<section id="importa-fuentes-en-angular">
+<h2><a class="toc-backref" href="#id74">Importa fuentes en Angular</a><a class="headerlink" href="#importa-fuentes-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<p>Vamos al archivo <code class="docutils literal notranslate"><span class="pre">styles.scss</span></code> y escribimos el siguiente código reemplazando el link por la url de nuestra fuente:</p>
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id34" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@import</span> <span class="n">url</span><span class="p">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Quicksand&amp;display=swap&#39;</span><span class="p">)</span>
+
+<span class="o">*</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">&#39;Quicksand&#39;</span><span class="p">,</span> <span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="servicios">
+<h2><a class="toc-backref" href="#id75">Servicios</a><a class="headerlink" href="#servicios" title="Enlazar permanentemente con este título"></a></h2>
+<p>Forma en la que angular nos permite hacer modular nuestra aplicación y apartar la lógica de negocio que no tiene que ver con la IU, si no para manipular datos, hacer servicios compartidos que puedan ser utilizados a traves de toda la aplicación por varios componentes.</p>
+<p>Para generarlo utilizamos el siguiente comando en donde especificamos un directorio para almacenar todos nuestros servicios</p>
+<p>ng g s services/nombre_servicio</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>La <strong>g</strong> es por generate y la <strong>s</strong> por service.</p></li>
+<li><p>Es recomendable crear los componentes en una directorio <strong>servicios/</strong>.</p></li>
+<li><p>El CLI de Angular modifica el archivo <code class="docutils literal notranslate"><span class="pre">app.module.ts</span></code> y nos genera 2 un <strong>.spec.ts</strong> y un <strong>.ts</strong>.</p></li>
+<li><p>No se generan archivos de interfaz porque los servicios comunican lógica de negocio.</p></li>
+</ul>
+</div>
+<p>Dentro del archivo <strong>.ts</strong> tenemos el decorador &#64;Injectable que le indica a Angular que el servicio se pueda inyectar en otros servicio y en otros componentes.</p>
+<p>Lógica del servicio:</p>
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id35" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span>
+
+<span class="kd">@Injectable</span><span class="p">({</span>
+    <span class="nx">provideIn</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">NombreService</span> <span class="p">{</span>
+    <span class="nx">serviceCounter</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mf">0</span>
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="nx">incrementCounter</span><span class="p">(</span><span class="nx">contador</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">contador</span> <span class="o">+=</span> <span class="mf">1</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">serviceCounter</span> <span class="o">=</span> <span class="nx">contador</span>
+    <span class="p">}</span>
+
+    <span class="nx">getContador</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">serviceCounter</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>En el componente tenemos que inyectar nuestro servicio</p>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id36" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">NombreService</span> <span class="p">}</span> <span class="kr">from</span>  <span class="s1">&#39;../../service/name.service&#39;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">NameComponent</span> <span class="p">{</span>
+    <span class="nx">contador</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mf">1</span>
+    <span class="kr">constructor</span><span class="p">(</span>
+<span class="hll">        <span class="k">private</span> <span class="nx">nombreService</span>: <span class="kt">NombreService</span>
+</span>    <span class="p">)</span> <span class="p">{</span>
+<span class="hll">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombreService</span><span class="p">.</span><span class="nx">getContador</span><span class="p">())</span>
+</span>    <span class="p">}</span>
+
+    <span class="nx">onPressButton</span><span class="p">(){</span>
+<span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">nombreService</span><span class="p">.</span><span class="nx">incrementCounter</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">contador</span><span class="p">)</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="inyeccion-de-dependencias">
+<h2><a class="toc-backref" href="#id76">Inyección de dependencias</a><a class="headerlink" href="#inyeccion-de-dependencias" title="Enlazar permanentemente con este título"></a></h2>
+<p>Angular marca con un decorador a los servicios, esto hace que se pueda inyectar en otros componentes.Tienen un domino o alcance como scope (EJ: provideIn: root) significa que es parte del modulo donde estemos trabajando.</p>
+<p>El motor de inyección de dependencias de angular, aprovecha el tipado para cuando el componente lo llame, crea una instancia de ese servicio y lo pone a su disposición.</p>
+<p>Podemos tener varios servicios, y también varios componentes.</p>
+<a class="reference internal image-reference" href="../../_images/inyeccion-dependencias.png"><img alt="Logo Angular" class="align-center" src="../../_images/inyeccion-dependencias.png" style="width: 400px;" /></a>
+<p>En este ejemplo tenemos 2 servicios y 3 componentes, donde:</p>
+<ul class="simple">
+<li><p>El componente A y B están requiriendo el servicio A</p></li>
+<li><p>El componente B y C están requiriendo el servicio B</p></li>
+</ul>
+<p>Aquí podemos ver que el componente B inyecta a 2 servicios. <strong>«Un componente puede inyectar cuantos servicios requiera»</strong></p>
+<p>También vemos que se aplica y Angular maneja y es el patron <strong>Singleton</strong></p>
+<p><strong>Patron Singleton:</strong> Si creo una instancia de algún elemento o clase (Ej: servicio A) y otro componente la requiere no crea otra instancia, si no que guarda en memoria la instancia ya creada anteriormente, y devuelve esa referencia a los demás componentes que la necesiten. Esto evita no crear instancias por cada componente que requiera el servicio.</p>
+<p>También puede darse el caso de que un servicio puede inyectar a otro:</p>
+<blockquote>
+<div><p>Servicio B ==&gt; Servicio A</p>
+</div></blockquote>
+<p>Lo que no se puede hacer es una inyección doble (Error de referencia circular):</p>
+<blockquote>
+<div><p>Servicio B &lt;==&gt; Servicio A</p>
+</div></blockquote>
+</section>
+<section id="angular-http">
+<h2><a class="toc-backref" href="#id77">Angular Http</a><a class="headerlink" href="#angular-http" title="Enlazar permanentemente con este título"></a></h2>
+<p>Angular tine un modulo especial para hacer peticiones <strong>Angular Http</strong>.</p>
+<p>Para usarlos importamos en <strong>app.modules</strong> y lo agregamos a imports.</p>
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id37" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClientModule</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/common/http&#39;</span><span class="p">;</span>
+</span>
+<span class="kd">@NgModule</span><span class="p">({</span>
+     <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span>
+         <span class="nx">AppComponent</span>
+         <span class="p">...</span>
+     <span class="p">],</span>
+     <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span>
+         <span class="nx">BrowserModule</span><span class="p">,</span>
+         <span class="nx">AppRoutingModule</span><span class="p">,</span>
+<span class="hll">         <span class="nx">HttpClientModule</span>
+</span>     <span class="p">],</span>
+     <span class="nx">providers</span><span class="o">:</span> <span class="p">[],</span>
+     <span class="nx">bootstrap</span><span class="o">:</span> <span class="p">[</span><span class="nx">AppComponent</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<p>Luego en <strong>nuestro servicio</strong> donde donde vamos a hacer la implementación, hacemos la llamada al <strong>servicio HttpClient</strong> del modulo <strong>http de Angular</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id38" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span>
+</span><span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/common/http&#39;</span>
+
+<span class="kd">@Injectable</span><span class="p">({</span>
+    <span class="nx">provideIn</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">NombreService</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span>
+<span class="hll">        <span class="k">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span>
+</span>    <span class="p">)</span> <span class="p">{}</span>
+
+    <span class="nx">getData</span><span class="p">(){</span>
+<span class="hll">        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span class="nx">Data</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;url-api...&#39;</span><span class="p">)</span>
+</span>    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>En el componente tenemos que inyectar <strong>nuestro servicio</strong> y llamar a la función que nos tre los datos de la <strong>API</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id39" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">NombreService</span> <span class="p">}</span> <span class="kr">from</span>  <span class="s1">&#39;../../service/name.service&#39;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">NameComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span><span class="p">{</span>
+    <span class="kr">constructor</span><span class="p">(</span>
+        <span class="k">private</span> <span class="nx">nombreService</span>: <span class="kt">NombreService</span>
+    <span class="p">)</span> <span class="p">{}</span>
+
+    <span class="nx">ngOnInit</span><span class="p">()</span><span class="o">:</span> <span class="ow">void</span> <span class="p">{</span>
+<span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">nombreService</span><span class="p">.</span><span class="nx">getData</span><span class="p">()</span>
+</span><span class="hll">             <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">})</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="pipes">
+<h2><a class="toc-backref" href="#id78">Pipes</a><a class="headerlink" href="#pipes" title="Enlazar permanentemente con este título"></a></h2>
+<p>Son tuberías, tenemos una <strong>entrada</strong> , <strong>transformación</strong> y <strong>salida</strong> . Los pipes se pueden unir, la salida de una tubería puede ser la entrada de otra.</p>
+<p>Los pipes funcionan dentro de la vista en los strings interpolations. Angular trae incorporado una serie de pipes.</p>
+<p>Por ejemplo si tenemos una variable de precio en decimal que queremos mostrar podemos usar el <strong>pipe currency</strong> el cual no redondea a 2 decimales y ademas nos permite indicar el nombre de la moneda que estamos utilizando.</p>
+<p>Si tenemos una variable de tipo fecha con la fecha de hoy, podemos usar el <strong>pipe date</strong> el cual nos permite mostrar una fecha con formato especial y podríamos utilizar diferentes formatos según la <a class="reference external" href="https://angular.io/api/common/DatePipe">documentación</a> .</p>
+<p>También tenemos un <strong>pipe uppercase</strong> que nos permite Poner todo un texto en mayúsculas.</p>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id40" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span> {{ price | currency:&#39;ARG&#39; }} <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Today: {{ today | date:&#39;short&#39; }} <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> otra fecha: {{ date | date:&#39;yyyy/dd/MM&#39; }} <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> {{ &#39;hoLA MuNDo&#39; | uppercase }} <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Para crear un nuevo <strong>pipe</strong> tenemos que utilizar el siguiente comando</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng g p pipes/nombre_pipe</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>La <strong>g</strong> es por generate y la <strong>p</strong> por service.</p></li>
+<li><p>Es recomendable crear los <strong>pipes</strong> en una directorio <strong>pipes/</strong>.</p></li>
+<li><p>El comando anterior nos crea 2 archivos, el <strong>.ts</strong> donde definiremos las reglas de pipe y el <strong>.spec.ts</strong> que es para las pruebas.</p></li>
+</ul>
+</div>
+<p>Dentro del directorio pipes buscamos el archivo <strong>.ts</strong> el cual tiene la siguiente estructura:</p>
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id41" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Pipe</span><span class="p">,</span> <span class="nx">PipeTransform</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Pipe</span><span class="p">({</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;example&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ExamplePipe</span> <span class="k">implements</span> <span class="nx">PipeTransform</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">unknown</span><span class="p">,</span> <span class="nx">...args</span>: <span class="kt">unknown</span><span class="p">[])</span><span class="o">:</span> <span class="nx">unknown</span> <span class="p">{</span>
+</span>        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Cambiaremos los argumentos de la función <strong>transform</strong> por lo que necesitemos por ejemplo:</p>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id42" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Pipe</span><span class="p">,</span> <span class="nx">PipeTransform</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Pipe</span><span class="p">({</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;example&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ExamplePipe</span> <span class="k">implements</span> <span class="nx">PipeTransform</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">transform</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">return</span> <span class="nx">value</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="directivas">
+<h2><a class="toc-backref" href="#id79">Directivas</a><a class="headerlink" href="#directivas" title="Enlazar permanentemente con este título"></a></h2>
+<p>Se utilizan para hacer modificación del DOM de forma directa, y modificar atributos. Usualmente evitamos hacer modificaciones directas del DOM porque angular ya lo hace por nosotros. Pero las directivas son otra forma de modificar el DOM con una buena practica.</p>
+<p>Para crear la <strong>directiva</strong> utilizamos el comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng g d directives/nombre_directiva</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>La <strong>g</strong> es por generate y la <strong>g</strong> por directive.</p></li>
+<li><p>Es recomendable crear las <strong>directivas</strong> en una directorio <strong>directives/</strong>.</p></li>
+<li><p>El comando anterior nos crea 2 archivos, el <strong>.ts</strong> donde definiremos la lógica de la directiva y el <strong>.spec.ts</strong> que es para las pruebas.</p></li>
+</ul>
+</div>
+<p>Dentro del directorio directives buscamos el archivo <strong>.ts</strong> el cual tiene la siguiente estructura:</p>
+<div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id43" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Directive</span><span class="p">({</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[appExample]&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ExampleDirective</span> <span class="p">{</span>
+    <span class="kr">constructor</span> <span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Una directiva tiene un decorador especifico para saber su funcionalidad directa, también tiene un selector que es la forma en la cual vamos a usarla dentro de nuestro HTML.</p>
+<p>Para poder manipular el DOM vamos a importar el servicio ElementRef, lo inyectamos en el constructor. Con nativeElement obtendremos el elemento nativo de HTML y podríamos agregarle estilo, manipularlo, etc.</p>
+<div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id44" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">ElementRef</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+</span>
+<span class="kd">@Directive</span><span class="p">({</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[appExample]&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ExampleDirective</span> <span class="p">{</span>
+<span class="hll">    <span class="kr">constructor</span> <span class="p">(</span> <span class="k">private</span> <span class="nx">element</span>: <span class="kt">ElementRef</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">;</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Para aplicar la directiva, vamos al html y lo ponemos como un atributo en el elemento</p>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-text">Código HTML</span><a class="headerlink" href="#id45" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-html+ng2 notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">appExample</span><span class="p">&gt;</span> Texto de ejemplo <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>También podemos escuchar eventos del elemento host (el que implementa la directiva) para realizar un comportamiento en especial. Para esto hay una directiva especial llamada <code class="docutils literal notranslate"><span class="pre">&#64;HostListener</span></code> del paquete <strong>&#64;angular/core</strong></p>
+<div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id46" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">ElementRef</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Directive</span><span class="p">({</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[appExample]&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ExampleDirective</span> <span class="p">{</span>
+<span class="hll">     <span class="kd">@HostListener</span><span class="p">(</span><span class="s1">&#39;mouseenter&#39;</span><span class="p">)</span> <span class="nx">onMouseEnter</span><span class="p">(){</span>
+</span>        <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">;</span>
+     <span class="p">}</span>
+
+<span class="hll">     <span class="kd">@HostListener</span><span class="p">(</span><span class="s1">&#39;mouseleave&#39;</span><span class="p">)</span> <span class="nx">onMouseLeave</span><span class="p">(){</span>
+</span>         <span class="k">this</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+     <span class="p">}</span>
+
+    <span class="kr">constructor</span> <span class="p">(</span> <span class="k">private</span> <span class="nx">element</span>: <span class="kt">ElementRef</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Las directivas nos sirven para hacer modificaciones complejas y dinámicas al DOM, hay muchas librerías que usan directivas.</p>
+</section>
+<section id="reactividad-basica">
+<h2><a class="toc-backref" href="#id80">Reactividad Básica</a><a class="headerlink" href="#reactividad-basica" title="Enlazar permanentemente con este título"></a></h2>
+<p>HTML es un Árbol con sus nodos y sus hijos. Si un nodo del nivel de abajo de quiere comunicar con alguno de los otros niveles de arriba, lo que pensamos en teoría de arboles lo que tenemos que hacer es recorrer cada padre con los nodos que queremos visitar. Esto puede ser muy complejo porque al dividir la aplicación en muchos componentes tendríamos que hacer con la comunicación usando <strong>Output</strong> enviando a cada padre hasta llegar al nodo que queremos comunicar. Por esto se crearon estrategias para manipular el estado de otra forma sin tener que hacer todo el recorrido del árbol, teniendo un <strong>STORE</strong>, donde se almacenan los estados globales de la aplicación que se van a compartir. Por ejemplo: Session de usuario, carro de compras, array de productos,etc. Los componentes que quieran ese estado, se suscriben y cada vez que haya un cambio se notificara a los componentes que se suscribieron.</p>
+<a class="reference internal image-reference" href="../../_images/stageManagement.png"><img alt="Stage Management" class="align-center" src="../../_images/stageManagement.png" style="width: 500px;" /></a>
+<p>Por ejemplo creamos un servicio donde definimos una variable como un <strong>BehaviorSubject</strong> que es la variable que vamos a transmitir (definimos valor inicial). A esa variable le creamos un suscriptor. Para transmitir utilizamos una función para cambiar el <strong>estado</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id47" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span>
+<span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">BehaviorSubject</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;rxjs&#39;</span>
+</span>
+<span class="kd">@Injectable</span><span class="p">({</span>
+    <span class="nx">provideIn</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">NombreService</span> <span class="p">{</span>
+<span class="hll">    <span class="k">private</span> <span class="nx">myValue</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="kt">boolean</span><span class="o">&gt;</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</span><span class="hll">    <span class="nx">myValue$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">myValue</span><span class="p">.</span><span class="nx">asObservable</span><span class="p">()</span>
+</span>
+<span class="hll">    <span class="nx">toggleValue</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">boolean</span><span class="p">){</span>
+</span><span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">myValue</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span>    <span class="p">}</span>
+
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Por ultimo vamos al .ts del componente donde queramos escuchar/observar el valor que necesitemos, lo importamos y</p>
+<div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-text">Código TypeScript</span><a class="headerlink" href="#id48" title="Enlace permanente a este código fuente"></a></div>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="k">import</span> <span class="p">{</span> <span class="nx">ExampleService</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../../service/exampleservice.service&#39;</span>
+</span>
+<span class="kd">@Component</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">ejemploComponent</span> <span class="k">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+
+        <span class="nx">value</span>: <span class="kt">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">        <span class="k">private</span> <span class="nx">exampleService</span>: <span class="kt">ExampleService</span>
+</span>    <span class="p">}</span>
+
+<span class="hll">    <span class="nx">ngOnInit</span><span class="p">()</span><span class="o">:</span> <span class="ow">void</span> <span class="p">{</span>
+</span><span class="hll">        <span class="k">this</span><span class="p">.</span><span class="nx">exampleService</span><span class="p">.</span><span class="nx">myValue$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">            <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+</span>        <span class="p">})</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="linters-en-angular">
+<h2><a class="toc-backref" href="#id81">Linters en Angular</a><a class="headerlink" href="#linters-en-angular" title="Enlazar permanentemente con este título"></a></h2>
+<p>Angular tiene un compendio de reglas de buenas practicas para escribir código (<a class="reference external" href="https://angular.io/guide/styleguide#naming">Link</a>)</p>
+<p>Para ejecutar un linter en angular ejecutamos el siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng lint</span>
+</pre></div>
+</div>
+<p>En caso que no tengamos ningún linter configurado ejecutamos el siguiente comando que angular nos sugiere:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ng add @angular-eslint/schematics</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El comando anterior funciona bien para versiones de angular 12 o superior. Para mas información <a class="reference external" href="https://github.com/angular-eslint/angular-eslint#migrating-from-codelyzer-and-tslint">ir a</a>.</p>
+</div>
 </section>
 </section>
 
