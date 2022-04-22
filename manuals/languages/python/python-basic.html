@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Básico &mdash; documentación de La Docu 🏠 - </title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Python Intermedio" href="python-medium.html" />
+    <link rel="prev" title="Angular" href="../../frameworks/angular.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> La Docu 🏠
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Frameworks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../frameworks/angular.html">Angular</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Languages</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Básico</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#porque-aprender-python">Porque Aprender python?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#en-que-areas-puedo-encontrar-python">En que Areas Puedo encontrar python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#empresas-que-utilizan-python">Empresas que utilizan python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ventajas">Ventajas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#editores-de-codigos-e-ides-consolas">Editores de códigos e IDES - Consolas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#consola">Consola</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#instalacion-de-python">Instalación de Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#version-de-python">Version de python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-aritmeticos">Operadores aritméticos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-primitivos">Tipos primitivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convertir-datos-a-otros-tipos">Convertir datos a otros tipos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operadores-logicos-y-de-comparacion">Operadores lógicos y de comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#condicionales">Condicionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones">Funciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-con-strings">Métodos con strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slices">Slices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buenas-practicas">Buenas practicas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bucles">Bucles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#while">While</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for">For</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#break-y-continue">Break y Continue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#continue">Continue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#break">Break</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modulos">Módulos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listas">Listas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuplas">Tuplas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diccionarios">Diccionarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operaciones-en-diccionarios">Operaciones en diccionarios</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python-medium.html">Python Intermedio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-web-scraping.html">Web scraping con Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">La Docu 🏠</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Python Básico</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/manuals/languages/python/python-basic.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="../../frameworks/angular.html" class="btn btn-neutral float-left" title="Angular" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="python-medium.html" class="btn btn-neutral float-right" title="Python Intermedio" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-basico">
+<h1>Python Básico<a class="headerlink" href="#python-basico" title="Enlazar permanentemente con este título"></a></h1>
+<a class="reference internal image-reference" href="../../../_images/logo.png"><img alt="Logo" class="align-center" src="../../../_images/logo.png" style="width: 400px;" /></a>
+<p>Última edición el día 2022-04-22 a las 12:53.</p>
+<div class="contents local topic" id="table-de-contenidos-de-la-pagina">
+<p class="topic-title">Table de contenidos de la pagina</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#porque-aprender-python" id="id1">Porque Aprender python?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#en-que-areas-puedo-encontrar-python" id="id2">En que Areas Puedo encontrar python</a></p></li>
+<li><p><a class="reference internal" href="#empresas-que-utilizan-python" id="id3">Empresas que utilizan python</a></p></li>
+<li><p><a class="reference internal" href="#ventajas" id="id4">Ventajas</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#editores-de-codigos-e-ides-consolas" id="id5">Editores de códigos e IDES - Consolas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#consola" id="id6">Consola</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#instalacion-de-python" id="id7">Instalación de Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#version-de-python" id="id8">Version de python</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#operadores-aritmeticos" id="id9">Operadores aritméticos</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id10">Variables</a></p></li>
+<li><p><a class="reference internal" href="#tipos-primitivos" id="id11">Tipos primitivos</a></p></li>
+<li><p><a class="reference internal" href="#convertir-datos-a-otros-tipos" id="id12">Convertir datos a otros tipos</a></p></li>
+<li><p><a class="reference internal" href="#operadores-logicos-y-de-comparacion" id="id13">Operadores lógicos y de comparación</a></p></li>
+<li><p><a class="reference internal" href="#condicionales" id="id14">Condicionales</a></p></li>
+<li><p><a class="reference internal" href="#funciones" id="id15">Funciones</a></p></li>
+<li><p><a class="reference internal" href="#metodos-con-strings" id="id16">Métodos con strings</a></p></li>
+<li><p><a class="reference internal" href="#slices" id="id17">Slices</a></p></li>
+<li><p><a class="reference internal" href="#buenas-practicas" id="id18">Buenas practicas</a></p></li>
+<li><p><a class="reference internal" href="#bucles" id="id19">Bucles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#while" id="id20">While</a></p></li>
+<li><p><a class="reference internal" href="#for" id="id21">For</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#break-y-continue" id="id22">Break y Continue</a></p>
+<ul>
+<li><p><a class="reference internal" href="#continue" id="id23">Continue</a></p></li>
+<li><p><a class="reference internal" href="#break" id="id24">Break</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modulos" id="id25">Módulos</a></p></li>
+<li><p><a class="reference internal" href="#listas" id="id26">Listas</a></p></li>
+<li><p><a class="reference internal" href="#tuplas" id="id27">Tuplas</a></p></li>
+<li><p><a class="reference internal" href="#diccionarios" id="id28">Diccionarios</a></p>
+<ul>
+<li><p><a class="reference internal" href="#operaciones-en-diccionarios" id="id29">Operaciones en diccionarios</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="porque-aprender-python">
+<h2><a class="toc-backref" href="#id1">Porque Aprender python?</a><a class="headerlink" href="#porque-aprender-python" title="Enlazar permanentemente con este título"></a></h2>
+<section id="en-que-areas-puedo-encontrar-python">
+<h3><a class="toc-backref" href="#id2">En que Areas Puedo encontrar python</a><a class="headerlink" href="#en-que-areas-puedo-encontrar-python" title="Enlazar permanentemente con este título"></a></h3>
+<ul class="simple">
+<li><p>Frontend</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IOT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Inteligencia</span> <span class="pre">Artificial</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Backend</span></code></p></li>
+<li><p>DevOps</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Science</span></code></p></li>
+<li><p>Videojuegos</p></li>
+<li><p>Desarrollo móvil</p></li>
+</ul>
+</section>
+<section id="empresas-que-utilizan-python">
+<h3><a class="toc-backref" href="#id3">Empresas que utilizan python</a><a class="headerlink" href="#empresas-que-utilizan-python" title="Enlazar permanentemente con este título"></a></h3>
+<ul class="simple">
+<li><p>Google</p></li>
+<li><p>Instagram</p></li>
+<li><p>Spotify</p></li>
+<li><p>Netflix</p></li>
+<li><p>Uber</p></li>
+<li><p>Pinterest</p></li>
+</ul>
+</section>
+<section id="ventajas">
+<h3><a class="toc-backref" href="#id4">Ventajas</a><a class="headerlink" href="#ventajas" title="Enlazar permanentemente con este título"></a></h3>
+<ul class="simple">
+<li><p>Buenas Practicas: Identación</p></li>
+<li><p>Fácil: Muy fácil de aprender</p></li>
+<li><p>Elegante: Estructura definida</p></li>
+</ul>
+</section>
+</section>
+<section id="editores-de-codigos-e-ides-consolas">
+<h2><a class="toc-backref" href="#id5">Editores de códigos e IDES - Consolas</a><a class="headerlink" href="#editores-de-codigos-e-ides-consolas" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VSCODE</span></code></p></li>
+<li><p>PyCharm</p></li>
+</ul>
+<section id="consola">
+<h3><a class="toc-backref" href="#id6">Consola</a><a class="headerlink" href="#consola" title="Enlazar permanentemente con este título"></a></h3>
+<ul class="simple">
+<li><p>CMD</p></li>
+<li><p>Power Shell</p></li>
+<li><p>Cmder o gitbash</p></li>
+</ul>
+</section>
+</section>
+<section id="instalacion-de-python">
+<h2><a class="toc-backref" href="#id7">Instalación de Python</a><a class="headerlink" href="#instalacion-de-python" title="Enlazar permanentemente con este título"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/win_installer.png"><img alt="Installer" class="align-center" src="../../../_images/win_installer.png" style="width: 800px;" /></a>
+<section id="version-de-python">
+<h3><a class="toc-backref" href="#id8">Version de python</a><a class="headerlink" href="#version-de-python" title="Enlazar permanentemente con este título"></a></h3>
+<p>Entramos a nuestra consola y ejecutamos:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python --version</span>
+</pre></div>
+</div>
+<p>Para salir de python ejecutamos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="operadores-aritmeticos">
+<h2><a class="toc-backref" href="#id9">Operadores aritméticos</a><a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">//</span> <span class="mi">2</span> <span class="c1">#div entera</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span> <span class="c1">#Modulo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">2</span> <span class="c1">#Potencia 2^2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="c1"># raiz cuadrada</span>
+</pre></div>
+</div>
+</section>
+<section id="variables">
+<h2><a class="toc-backref" href="#id10">Variables</a><a class="headerlink" href="#variables" title="Enlazar permanentemente con este título"></a></h2>
+<p>&lt;identificador&gt; = &lt;valor&gt;</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#asignación</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span> <span class="c1">#11</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">-</span> <span class="n">numero2</span> <span class="c1">#-1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="c1">#11</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>El identificador de una variable no puede comenzar con un numero y debe estar en minúsculas. Las palabras dentro del mismo se separan con guion bajo (Snake_Case por Buenas practicas)</p>
+</div>
+</section>
+<section id="tipos-primitivos">
+<h2><a class="toc-backref" href="#id11">Tipos primitivos</a><a class="headerlink" href="#tipos-primitivos" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p>Números enteros</p></li>
+<li><p>Números de punto flotante (decimales)</p></li>
+<li><p>Texto (cadenas de caracteres o strings)</p></li>
+<li><p>Booleanos (verdadero o falso)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Nico&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="c1">#&#39;Nico&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre2</span> <span class="o">=</span> <span class="s2">&quot;Mendoza&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="o">+</span><span class="n">nombre2</span> <span class="c1">#&#39;NicoMendoza&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">*</span> <span class="mi">4</span> <span class="c1">#&#39;NicoNicoNicoNico&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="n">nombre2</span> <span class="c1">#&#39;Nico, Mendoza&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero_decimal</span> <span class="o">=</span> <span class="mf">3.4</span> <span class="c1">#no usar coma , para los decimales</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_programador</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">es_ingeniero</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+<section id="convertir-datos-a-otros-tipos">
+<h2><a class="toc-backref" href="#id12">Convertir datos a otros tipos</a><a class="headerlink" href="#convertir-datos-a-otros-tipos" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribir un numero: &quot;</span><span class="p">)</span> <span class="c1">#Escribir un numero: 4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="c1">#&#39;4&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribir un numero: &quot;</span><span class="p">)</span> <span class="c1">#Escribir un numero: 5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero2</span> <span class="c1">#&#39;5&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span> <span class="c1">#&#39;45&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero1</span> <span class="c1">#4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numero2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero2</span> <span class="c1">#5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numero_decimal</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">numero_decimal</span><span class="p">)</span> <span class="c1">#4 (quita la parte entera)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">str</span><span class="p">(</span><span class="n">numero_decimal</span><span class="p">)</span> <span class="c1">#&#39;4.5&#39; (convierte a string)</span>
+</pre></div>
+</div>
+</section>
+<section id="operadores-logicos-y-de-comparacion">
+<h2><a class="toc-backref" href="#id13">Operadores lógicos y de comparación</a><a class="headerlink" href="#operadores-logicos-y-de-comparacion" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lógicos</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">es_estudiante</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">es_estudiante</span> <span class="c1">#True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trabaja</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">trabaja</span> <span class="c1">#False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">es_estudiante</span> <span class="ow">and</span> <span class="n">trabaja</span> <span class="c1">#False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">es_estudiante</span> <span class="ow">or</span> <span class="n">trabaja</span> <span class="c1">#True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="n">es_estudiante</span> <span class="c1">#False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="n">trabaja</span> <span class="c1">#True</span>
+
+<span class="c1">#comparación</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero2</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero3</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="c1">#5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero2</span> <span class="c1">#5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="o">==</span> <span class="n">numero2</span> <span class="c1">#True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="o">!=</span> <span class="n">numero2</span> <span class="c1">#False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="o">&gt;</span> <span class="n">numero2</span> <span class="c1">#False (se puede incluir el igual)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numero1</span> <span class="o">&lt;</span> <span class="n">numero3</span> <span class="c1">#True (se puede incluir el igual)</span>
+</pre></div>
+</div>
+</section>
+<section id="condicionales">
+<h2><a class="toc-backref" href="#id14">Condicionales</a><a class="headerlink" href="#condicionales" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingrese su edad: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;</span> <span class="mi">17</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mayor de edad&#39;</span><span class="p">)</span> <span class="c1">#podemos poner pass cuando no sabemos que va en este bloque</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No es mayor de edad&#39;</span><span class="p">)</span>
+
+<span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe un numero: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es mayor a 5&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es menor a 5&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Es menor a 5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="funciones">
+<h2><a class="toc-backref" href="#id15">Funciones</a><a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nombre_funcion</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametros</span><span class="o">&gt;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mensaje&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bloque de código&quot;</span><span class="p">)</span>
+
+<span class="n">nombre_funcion</span><span class="p">(</span><span class="o">&lt;</span><span class="n">parametros</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Las funciones deben ser definidas antes de ser invocadas para funcionar.</p></li>
+<li><p>return devuelve el valor de la variable que esta a continuación.</p></li>
+</ul>
+</div>
+</section>
+<section id="metodos-con-strings">
+<h2><a class="toc-backref" href="#id16">Métodos con strings</a><a class="headerlink" href="#metodos-con-strings" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresar nombre: &quot;</span><span class="p">)</span> <span class="c1">#Ingresar nombre: nicolás</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#NICOLÁS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="c1">#Nicolás</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1">#Quita los espacios adelante y atrás</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#nicolás (todo minusculas)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1">#nicalás</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#n (puedo acceder a los caracteres)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="c1">#7</span>
+</pre></div>
+</div>
+</section>
+<section id="slices">
+<h2><a class="toc-backref" href="#id17">Slices</a><a class="headerlink" href="#slices" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Nicolás&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#&#39;Nic&#39; (hasta antes del indice 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#&#39;Nic&#39; (hasta antes del indice 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="c1">#&#39;olás&#39; (parto del indice 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#&#39;Ncl&#39; (Del 0 al 6 en 2 pasos)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[::]</span> <span class="c1">#&#39;Nicolás&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nombre</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#&#39;sálociN&#39; (pasos inversos)</span>
+</pre></div>
+</div>
+</section>
+<section id="buenas-practicas">
+<h2><a class="toc-backref" href="#id18">Buenas practicas</a><a class="headerlink" href="#buenas-practicas" title="Enlazar permanentemente con este título"></a></h2>
+<p>Crear una función principal. corre el programa al principio (run o main)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>También tenemos el entry point de un programa en python</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>También es un buena practica dejar 2 espacios vacíos entre las funciones y el entry point</p>
+</section>
+<section id="bucles">
+<h2><a class="toc-backref" href="#id19">Bucles</a><a class="headerlink" href="#bucles" title="Enlazar permanentemente con este título"></a></h2>
+<section id="while">
+<h3><a class="toc-backref" href="#id20">While</a><a class="headerlink" href="#while" title="Enlazar permanentemente con este título"></a></h3>
+<p>Potencias de 2 hasta 1 millón</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LIMITE</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">portencia_2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">contador</span>
+<span class="k">while</span><span class="p">(</span><span class="n">portencia_2</span> <span class="o">&lt;=</span> <span class="n">LIMITE</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 elevado a &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39; es: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">portencia_2</span><span class="p">))</span>
+    <span class="n">contador</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">portencia_2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="n">contador</span>
+</pre></div>
+</div>
+</section>
+<section id="for">
+<h3><a class="toc-backref" href="#id21">For</a><a class="headerlink" href="#for" title="Enlazar permanentemente con este título"></a></h3>
+<p>Listado de números hasta 1000</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LIMITE</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="k">for</span> <span class="n">contador</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">LIMITE</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Imprimir las letras de un string</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe tu nombre: &quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">nombre</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="break-y-continue">
+<h2><a class="toc-backref" href="#id22">Break y Continue</a><a class="headerlink" href="#break-y-continue" title="Enlazar permanentemente con este título"></a></h2>
+<p>Interrumpir ciclos</p>
+<section id="continue">
+<h3><a class="toc-backref" href="#id23">Continue</a><a class="headerlink" href="#continue" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">contador</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">contador</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span> <span class="c1">#Ejecuta hasta aquí y sigue con el ciclo</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="break">
+<h3><a class="toc-backref" href="#id24">Break</a><a class="headerlink" href="#break" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5678</span><span class="p">:</span>
+        <span class="k">break</span> <span class="c1">#Corta el ciclo y no se sigue ejecutando</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="modulos">
+<h2><a class="toc-backref" href="#id25">Módulos</a><a class="headerlink" href="#modulos" title="Enlazar permanentemente con este título"></a></h2>
+<p>Paquete de código escrito en python</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="c1">#Trae funciones para trabajar con números aleatorios</span>
+</pre></div>
+</div>
+<p>Todas las importaciones van al principio del programa</p>
+</section>
+<section id="listas">
+<h2><a class="toc-backref" href="#id26">Listas</a><a class="headerlink" href="#listas" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es una estructura de datos que nos permite guardar varios valores de diferentes tipos (permite tipos distintos)
+Las listas son dinámicas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span> <span class="p">,</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span> <span class="p">,</span><span class="mi">45</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#3 Si me salgo del indice me da un error</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#[&#39;Hola&#39;, 3, 4.5, True, 1] (Agrego al final de la lista)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1">#[&#39;Hola&#39;, 3, 4.5, True] (Quito el ultimo elemento)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#[&#39;Hola&#39;, 3, True] (Quito el segundo elemento)</span>
+
+<span class="go"># Recorrer una lista</span>
+
+<span class="go">for elemento in objetos:</span>
+<span class="go">    print(elemento)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">objetos</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#[True, 3, &#39;Hola&#39;] (invierto la lista)</span>
+
+<span class="go"># sumar listas</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista_final</span> <span class="o">=</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista_final</span> <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numeros1</span> <span class="o">*</span> <span class="mi">3</span> <span class="c1"># [1, 2, 3, 1, 2, 3, 1, 2, 3]</span>
+</pre></div>
+</div>
+</section>
+<section id="tuplas">
+<h2><a class="toc-backref" href="#id27">Tuplas</a><a class="headerlink" href="#tuplas" title="Enlazar permanentemente con este título"></a></h2>
+<p>Parecido a las listas. Pero son inmutables (Estáticos). No permite hacer append.
+Recorrido mas rápido con tuplas que con listas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mi_tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mi_tupla</span> <span class="c1">#(1, 2, 3, 4, 5)</span>
+
+<span class="go">for elemento in mi_tupla:</span>
+<span class="go">    print(elemento)</span>
+</pre></div>
+</div>
+</section>
+<section id="diccionarios">
+<h2><a class="toc-backref" href="#id28">Diccionarios</a><a class="headerlink" href="#diccionarios" title="Enlazar permanentemente con este título"></a></h2>
+<p>Estructuras de datos de llaves y valores, no accedemos por indices, si no por llaves (nombres) y los valores</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mi_diccionario</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;llave1&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;llave2&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;llave3&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">)</span> <span class="c1">#{&#39;llave1&#39;: 1, &#39;llave2&#39;: 2, &#39;llave3&#39;: 3}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">[</span><span class="s1">&#39;llave1&#39;</span><span class="p">])</span> <span class="c1">#1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">[</span><span class="s1">&#39;llave2&#39;</span><span class="p">])</span> <span class="c1">#2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">[</span><span class="s1">&#39;llave3&#39;</span><span class="p">])</span> <span class="c1">#3</span>
+</pre></div>
+</div>
+<section id="operaciones-en-diccionarios">
+<h3><a class="toc-backref" href="#id29">Operaciones en diccionarios</a><a class="headerlink" href="#operaciones-en-diccionarios" title="Enlazar permanentemente con este título"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">poblacion_paises</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Argentina&#39;</span><span class="p">:</span> <span class="mi">44_938_712</span><span class="p">,</span>
+    <span class="s1">&#39;Brasil&#39;</span><span class="p">:</span> <span class="mi">210_147_125</span><span class="p">,</span>
+    <span class="s1">&#39;Colombia&#39;</span><span class="p">:</span> <span class="mi">50_372_424</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>.keys():</strong> Retorna la clave de nuestro elemento.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pais</span> <span class="ow">in</span> <span class="n">poblacion_paises</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pais</span><span class="p">)</span> <span class="c1">#Argentina #Brasil #Colombia</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>.values():</strong> Retorna una lista de elementos (valores del diccionario).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pais</span> <span class="ow">in</span> <span class="n">poblacion_paises</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pais</span><span class="p">)</span> <span class="c1">#44_938_712 #210_147_125 #50_372_424</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>.items():</strong> Devuelve lista de tuplas (primero la clave y luego el valor).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pais</span><span class="p">,</span> <span class="n">poblacion</span> <span class="ow">in</span> <span class="n">poblacion_paises</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pais</span> <span class="o">+</span> <span class="s1">&#39; tiene &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">poblacion</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; habitantes&#39;</span><span class="p">)</span>
+    <span class="c1"># Argentina tiene 44938712 habitantes</span>
+    <span class="c1"># Brasil tiene 210147125 habitantes</span>
+    <span class="c1"># Colombia tiene 50372424 habitantes</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>.clear():</strong> Elimina todos los items del diccionario.</p></li>
+<li><p><strong>.pop(n):</strong> Elimina el elemento ingresado. n es la <strong>key</strong></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../../frameworks/angular.html" class="btn btn-neutral float-left" title="Angular" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="python-medium.html" class="btn btn-neutral float-right" title="Python Intermedio" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Mendoza Nicolás.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

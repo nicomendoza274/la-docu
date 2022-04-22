@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Intermedio &mdash; documentación de La Docu 🏠 - </title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" />
+    <link rel="next" title="Web scraping con Python" href="python-web-scraping.html" />
+    <link rel="prev" title="Python Básico" href="python-basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> La Docu 🏠
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Frameworks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../frameworks/angular.html">Angular</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Languages</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python-basic.html">Python Básico</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Intermedio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#el-zen-de-python">El zen de python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-documentacion">La documentación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pep">PEP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-un-modulo">Que es un modulo?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entorno-virtual">Entorno virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip">PIP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modulos-populares">Módulos populares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#listas-y-diccionarios-anidados">Listas y diccionarios anidados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-comprehensions">List comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dictionary-comprehensions">Dictionary comprehensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lambda-functions">lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones-de-orden-superior">Funciones de orden superior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#filter">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map">Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reduce">Reduce</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#los-errores-en-el-codigo">Los errores en el código</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#errores-de-sintaxis">Errores de Sintaxis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#traceback">TraceBack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#debugging">Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manejo-de-excepciones">Manejo de excepciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#try-except">try, except</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raise">raise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finally">Finally</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#assert-statements">Assert statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archivos">Archivos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python-web-scraping.html">Web scraping con Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">La Docu 🏠</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Python Intermedio</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/manuals/languages/python/python-medium.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="python-basic.html" class="btn btn-neutral float-left" title="Python Básico" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="python-web-scraping.html" class="btn btn-neutral float-right" title="Web scraping con Python" accesskey="n">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-intermedio">
+<h1>Python Intermedio<a class="headerlink" href="#python-intermedio" title="Enlazar permanentemente con este título"></a></h1>
+<a class="reference internal image-reference" href="../../../_images/logo.png"><img alt="Logo" class="align-center" src="../../../_images/logo.png" style="width: 400px;" /></a>
+<p>Última edición el día 2022-04-22 a las 12:53.</p>
+<div class="contents local topic" id="table-de-contenidos-de-la-pagina">
+<p class="topic-title">Table de contenidos de la pagina</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#el-zen-de-python" id="id1">El zen de python</a></p></li>
+<li><p><a class="reference internal" href="#la-documentacion" id="id2">La documentación</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pep" id="id3">PEP</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#que-es-un-modulo" id="id4">Que es un modulo?</a></p></li>
+<li><p><a class="reference internal" href="#entorno-virtual" id="id5">Entorno virtual</a></p></li>
+<li><p><a class="reference internal" href="#pip" id="id6">PIP</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modulos-populares" id="id7">Módulos populares</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#listas-y-diccionarios-anidados" id="id8">Listas y diccionarios anidados</a></p></li>
+<li><p><a class="reference internal" href="#list-comprehensions" id="id9">List comprehensions</a></p></li>
+<li><p><a class="reference internal" href="#dictionary-comprehensions" id="id10">Dictionary comprehensions</a></p></li>
+<li><p><a class="reference internal" href="#lambda-functions" id="id11">lambda functions</a></p></li>
+<li><p><a class="reference internal" href="#funciones-de-orden-superior" id="id12">Funciones de orden superior</a></p>
+<ul>
+<li><p><a class="reference internal" href="#filter" id="id13">Filter</a></p></li>
+<li><p><a class="reference internal" href="#map" id="id14">Map</a></p></li>
+<li><p><a class="reference internal" href="#reduce" id="id15">Reduce</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#los-errores-en-el-codigo" id="id16">Los errores en el código</a></p>
+<ul>
+<li><p><a class="reference internal" href="#errores-de-sintaxis" id="id17">Errores de Sintaxis</a></p></li>
+<li><p><a class="reference internal" href="#exceptions" id="id18">Exceptions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#debugging" id="id19">Debugging</a></p></li>
+<li><p><a class="reference internal" href="#manejo-de-excepciones" id="id20">Manejo de excepciones</a></p>
+<ul>
+<li><p><a class="reference internal" href="#try-except" id="id21">try, except</a></p></li>
+<li><p><a class="reference internal" href="#raise" id="id22">raise</a></p></li>
+<li><p><a class="reference internal" href="#finally" id="id23">Finally</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#assert-statements" id="id24">Assert statements</a></p></li>
+<li><p><a class="reference internal" href="#archivos" id="id25">Archivos</a></p></li>
+</ul>
+</div>
+<section id="el-zen-de-python">
+<h2><a class="toc-backref" href="#id1">El zen de python</a><a class="headerlink" href="#el-zen-de-python" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p>Bello es mejor que feo</p></li>
+<li><p>Explicito es mejor que implícito (para que otro entienda)</p></li>
+<li><p>Simple es mejor que complejo (pocas lineas que resuelve)</p></li>
+<li><p>Complejo es mejor que complicado (extenderlo si es necesario)</p></li>
+<li><p>Plano es mejor que anidado (cuando hacemos muchas dependencias, código a la derecha)</p></li>
+<li><p>Espacio es mejor que denso (Identación obligatoria para mantener el orden 4 espacios)</p></li>
+<li><p>Legibilidad es importante (otros desarrolladores puedan leer el código)</p></li>
+<li><p>Los casos especiales no son lo suficientemente especiales como para romper las reglas.Sin embargo la practicidad le gana a la pureza.  (equilibrio entre pragmatismo y pythonismo)</p></li>
+<li><p>Los errores nunca deberían pasar silenciosamente. A menos que se silencien explícitamente. (Manejarlos es prioritario y deben ser controlados)</p></li>
+<li><p>Frente a la ambigüedad, evitar la tentación de adivinar. (No algoritmos ambiguos, única interpretación)</p></li>
+<li><p>Debería haber una, y preferiblemente solo una, manera obvia de hacerlo. A pesar de que esa manera no sea obvia a menos que seas holandés.</p></li>
+<li><p>Ahora es mejor que nunca. A pesar de que nunca es muchas veces mejor que <em>ahora</em> mismo. (Hacerlo cuanto antes y no dejar para mañana, Si tenemos poco tiempo y desarrollamos mal código lo dejamos para después)</p></li>
+<li><p>Si la implementación es difícil de explicar, es una mala idea. Si la implementación es fácil de explicar, puede que sea una buena idea</p></li>
+<li><p>Los espacios de nombres son una gran idea, tengamos mas de esos</p></li>
+</ul>
+</section>
+<section id="la-documentacion">
+<h2><a class="toc-backref" href="#id2">La documentación</a><a class="headerlink" href="#la-documentacion" title="Enlazar permanentemente con este título"></a></h2>
+<p><a class="reference external" href="https://docs.python.org/3/">Documentación de Python</a></p>
+<section id="pep">
+<h3><a class="toc-backref" href="#id3">PEP</a><a class="headerlink" href="#pep" title="Enlazar permanentemente con este título"></a></h3>
+<p>Documentos de guiá de estilo. El mas utilizado y las buenas practicas están en <a class="reference external" href="https://peps.python.org/pep-0008/">PEP8</a></p>
+</section>
+</section>
+<section id="que-es-un-modulo">
+<h2><a class="toc-backref" href="#id4">Que es un modulo?</a><a class="headerlink" href="#que-es-un-modulo" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es código escrito por otra persona, que nos sirve para resolver un problema de manera rápida
+No reinventar la rueda, no realizar la solución que alguien mas hizo.
+Ej: Random (números aleatorios)</p>
+</section>
+<section id="entorno-virtual">
+<h2><a class="toc-backref" href="#id5">Entorno virtual</a><a class="headerlink" href="#entorno-virtual" title="Enlazar permanentemente con este título"></a></h2>
+<p>Un <strong>entorno virtual</strong> es como tener un entorno de instalación de python independiente por cada proyecto que tengamos y que tienen sus módulos independientes.
+Poder probar diferentes proyectos con módulos con versiones diferente.</p>
+<p>Para crear el entorno virtual utilizamos el comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv venv</span>
+</pre></div>
+</div>
+<p>Para activar el entorno virtual utilizamos el comando:</p>
+<ul class="simple">
+<li><p>windows (CMD/Powershell)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\venv\Scripts\activate</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>macOs y Linux</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source venv/bin/activate</span>
+</pre></div>
+</div>
+<p>Para salir del entorno virtual utilizamos el comando</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">deactivate</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Poner la carpeta venv del entorno virtual en el .gitignore</p>
+</div>
+</section>
+<section id="pip">
+<h2><a class="toc-backref" href="#id6">PIP</a><a class="headerlink" href="#pip" title="Enlazar permanentemente con este título"></a></h2>
+<p>Hay muchos módulos que están en python en su instalación de fabrica. Hay cierto módulos que fueron creados por 3ros y para instalar estos módulos usamos un gestor de dependencias o instalador de paquetes el mas popular en python es <strong>pip</strong> » <code class="docutils literal notranslate"><span class="pre">package</span> <span class="pre">installer</span> <span class="pre">for</span> <span class="pre">python</span></code> «.</p>
+<section id="modulos-populares">
+<h3><a class="toc-backref" href="#id7">Módulos populares</a><a class="headerlink" href="#modulos-populares" title="Enlazar permanentemente con este título"></a></h3>
+<p>Algunos módulos comunes:</p>
+<ul class="simple">
+<li><p>Requests</p></li>
+<li><p>BeautifulSoup4</p></li>
+<li><p>Pandas</p></li>
+<li><p>Numpy</p></li>
+<li><p>Pytest</p></li>
+</ul>
+<p>Para listar los módulos utilizamos el comando</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip freeze</span>
+</pre></div>
+</div>
+<p>Para instalar un modulo utilizamos el comando</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install pandas</span>
+</pre></div>
+</div>
+<p>Para poder compartir un proyecto e indicar las dependencias del mismo necesitamos pasar las dependencias de nuestro entorno virtual a un archivo, esto lo hacemos con el siguiente comando:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip freeze &gt; requirements.txt</span>
+</pre></div>
+</div>
+<p>Para instalar las dependencias desde un archivo utilizamos el comando</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="listas-y-diccionarios-anidados">
+<h2><a class="toc-backref" href="#id8">Listas y diccionarios anidados</a><a class="headerlink" href="#listas-y-diccionarios-anidados" title="Enlazar permanentemente con este título"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">super_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Facundo&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;García&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Miguel&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Torres&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Pepe&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Rodelo&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;Susana&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;Martinez&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;firstname&quot;</span><span class="p">:</span> <span class="s2">&quot;José&quot;</span><span class="p">,</span> <span class="s2">&quot;lastname&quot;</span><span class="p">:</span> <span class="s2">&quot;García&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+
+<span class="n">super_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;natural_nums&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s2">&quot;integer_nums&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="s2">&quot;floating_nums&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">6.43</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">super_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">super_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="list-comprehensions">
+<h2><a class="toc-backref" href="#id9">List comprehensions</a><a class="headerlink" href="#list-comprehensions" title="Enlazar permanentemente con este título"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/list_comprehensions.png"><img alt="List comprehensions" class="align-center" src="../../../_images/list_comprehensions.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>El <strong>if</strong> es completamente opcional</p></li>
+<li><p>Se lee «Para cada elemento en el iterable, guardo el elemento en la lista, si se cumple la condición»</p></li>
+</ul>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LIMIT</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">LIMIT</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span><span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dictionary-comprehensions">
+<h2><a class="toc-backref" href="#id10">Dictionary comprehensions</a><a class="headerlink" href="#dictionary-comprehensions" title="Enlazar permanentemente con este título"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/dict_comprehensions.png"><img alt="Dictionary comprehensions" class="align-center" src="../../../_images/dict_comprehensions.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>El <strong>if</strong> es completamente opcional</p></li>
+<li><p>Se lee «Para cada elemento en el iterable, Coloco una llave y un valor, si se cumple la condición»</p></li>
+</ul>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LIMIT</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="n">i</span><span class="p">:</span> <span class="n">i</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">LIMIT</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="lambda-functions">
+<h2><a class="toc-backref" href="#id11">lambda functions</a><a class="headerlink" href="#lambda-functions" title="Enlazar permanentemente con este título"></a></h2>
+<p>Funciones sin nombre, o funciones anónimas. Son funciones sin identificador. Tienen la siguiente estructura</p>
+<a class="reference internal image-reference" href="../../../_images/lambda_functions.png"><img alt="Lambda Functions" class="align-center" src="../../../_images/lambda_functions.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Puede tener los argumentos que necesitemos, pero solo una expresión (un linea de código)</p></li>
+</ul>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">palindrome</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">string</span><span class="p">:</span> <span class="n">string</span> <span class="o">==</span> <span class="n">string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="funciones-de-orden-superior">
+<h2><a class="toc-backref" href="#id12">Funciones de orden superior</a><a class="headerlink" href="#funciones-de-orden-superior" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es una función que recibe como parámetro a otra función</p>
+<a class="reference internal image-reference" href="../../../_images/high_order_function.png"><img alt="Función de orden superior" class="align-center" src="../../../_images/high_order_function.png" style="width: 400px;" /></a>
+<section id="filter">
+<h3><a class="toc-backref" href="#id13">Filter</a><a class="headerlink" href="#filter" title="Enlazar permanentemente con este título"></a></h3>
+<p>Me permite filtrar elementos de un iterable</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">21</span><span class="p">]</span>
+<span class="n">odd</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="map">
+<h3><a class="toc-backref" href="#id14">Map</a><a class="headerlink" href="#map" title="Enlazar permanentemente con este título"></a></h3>
+<p>Me permite transformar los elementos de una lista</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">my_list</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="reduce">
+<h3><a class="toc-backref" href="#id15">Reduce</a><a class="headerlink" href="#reduce" title="Enlazar permanentemente con este título"></a></h3>
+<p>Reduce los valores de la lista a un único valor</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">all_multiplied</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="los-errores-en-el-codigo">
+<h2><a class="toc-backref" href="#id16">Los errores en el código</a><a class="headerlink" href="#los-errores-en-el-codigo" title="Enlazar permanentemente con este título"></a></h2>
+<section id="errores-de-sintaxis">
+<h3><a class="toc-backref" href="#id17">Errores de Sintaxis</a><a class="headerlink" href="#errores-de-sintaxis" title="Enlazar permanentemente con este título"></a></h3>
+<p>Cuando python nos avisa que escribimos mal una palabra clave. Python no ejecuta.</p>
+</section>
+<section id="exceptions">
+<h3><a class="toc-backref" href="#id18">Exceptions</a><a class="headerlink" href="#exceptions" title="Enlazar permanentemente con este título"></a></h3>
+<p>Suceden en algún punto del programa que hace que quiebre la lógica. Python lo hace en una linea especifica y las lineas anteriores si se ejecutan.</p>
+<p>Python <strong>eleva</strong> una excepción para cortar el proceso. Python crea un objeto de typo excepción y lo va moviendo en los bloques desde dentro hacia afuera.</p>
+<p>Las excepciones mas comunes son:</p>
+<ul class="simple">
+<li><p><strong>KeyboardInterrupt</strong> : Cuando pulsamos ctrl + c en la consola de python. Cortamos el proceso de ejecución de python.</p></li>
+<li><p><strong>keyError</strong> : Intentamos acceder a una llave en un diccionario y esta no existe.</p></li>
+<li><p><strong>IndexError</strong> : Cuando intentamos acceder al indice en una lista que no existe.</p></li>
+<li><p><strong>FileNoteFoundError</strong> : Cuando intentamos abrir un archivo que no existe.</p></li>
+<li><p><strong>ZeroDivisionError</strong> : Sucede cuando intentamos dividir un numero entre cero.</p></li>
+<li><p><strong>ImportError</strong> : Intentamos importar un modulo y hay un error en este modulo.</p></li>
+</ul>
+<section id="traceback">
+<h4>TraceBack<a class="headerlink" href="#traceback" title="Enlazar permanentemente con este título"></a></h4>
+<p>Es el mensaje de error que nos muestra python. Se lee desde la ultima linea hasta la primera.</p>
+<a class="reference internal image-reference" href="../../../_images/tracekback.png"><img alt="TraceBack" class="align-center" src="../../../_images/tracekback.png" style="width: 400px;" /></a>
+<ol class="arabic simple">
+<li><p>Vemos que tipo de excepción es y un pequeño resumen.</p></li>
+<li><p>La line anterior: En que archivo ocurrió, la linea y que modulo (&lt;stdin&gt; consola interactiva)</p></li>
+<li><p>La anterior anterior: La traza del error de donde parte. Si el error no es capturado python eleva el error a la función mas arriba.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="debugging">
+<h2><a class="toc-backref" href="#id19">Debugging</a><a class="headerlink" href="#debugging" title="Enlazar permanentemente con este título"></a></h2>
+<ol class="arabic simple">
+<li><p>Para hacer debugging en <strong>vscode</strong> con <strong>python</strong> tenemos que tener instalada la extension <code class="docutils literal notranslate"><span class="pre">ms-python.python</span></code></p></li>
+<li><p>Luego vamos a la barra lateral izquierda y seleccionamos el botón run and debug</p></li>
+<li><p>Y Presionar el botón Run and Debug</p></li>
+<li><p>Podemos establecer los breakpoints en el código haciendo click a lado del numero de la linea</p></li>
+<li><p>Podemos avanzar linea por linea entrar a una función, reiniciar la depuración, continuar o pararla.</p></li>
+</ol>
+</section>
+<section id="manejo-de-excepciones">
+<h2><a class="toc-backref" href="#id20">Manejo de excepciones</a><a class="headerlink" href="#manejo-de-excepciones" title="Enlazar permanentemente con este título"></a></h2>
+<section id="try-except">
+<h3><a class="toc-backref" href="#id21">try, except</a><a class="headerlink" href="#try-except" title="Enlazar permanentemente con este título"></a></h3>
+<p>Por ejemplo cuando queremos ingresar números en una función que no los esperaba</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">string</span> <span class="o">==</span> <span class="n">string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solo se pueden ingresar strings&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Atrapo la excepción <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> e indico lo que sucede después de la excepción</p>
+</section>
+<section id="raise">
+<h3><a class="toc-backref" href="#id22">raise</a><a class="headerlink" href="#raise" title="Enlazar permanentemente con este título"></a></h3>
+<p>Puede ser que tengamos un error, pero python no lo detecta como tal, raise eleva el error. Ej: evitar que se ingresen cadenas vaciás. Raise eleva el error.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No se puede ingresar una cadena vacía&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">string</span> <span class="o">==</span> <span class="n">string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">ve</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ve</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solo se pueden ingresar strings&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="finally">
+<h3><a class="toc-backref" href="#id23">Finally</a><a class="headerlink" href="#finally" title="Enlazar permanentemente con este título"></a></h3>
+<p>Se usa al final e try except para cerrar un archivo, conexión a BD o liberar recursos externos. (No se usa generalmente)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;archivo.txt&quot;</span><span class="p">)</span>
+    <span class="c1"># hacer cualquier cosa con nuestro archivo</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#Si hay algún error o no se va a cerrar el archivo.</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="assert-statements">
+<h2><a class="toc-backref" href="#id24">Assert statements</a><a class="headerlink" href="#assert-statements" title="Enlazar permanentemente con este título"></a></h2>
+<p>Es una manera mas extravagante de manejar los errores. Son expresiones para manejar el flujo de nuestro programa.</p>
+<a class="reference internal image-reference" href="../../../_images/assert_statements.png"><img alt="Assert statements" class="align-center" src="../../../_images/assert_statements.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se lee «Afirmo que esta condición es verdadera si no, imprimo mensaje de error»</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;No se puede ingresar una cadena vaciá&#39;</span>
+    <span class="k">return</span> <span class="n">string</span> <span class="o">==</span> <span class="n">string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">palindrome</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+<span class="c1"># AssertionError: No se puede ingresar una cadena vaciá</span>
+</pre></div>
+</div>
+</section>
+<section id="archivos">
+<h2><a class="toc-backref" href="#id25">Archivos</a><a class="headerlink" href="#archivos" title="Enlazar permanentemente con este título"></a></h2>
+<p>En python hay 3 modos de apertura de un archivo de texto</p>
+<ul class="simple">
+<li><p>R -&gt; lectura</p></li>
+<li><p>W -&gt; Escritura (sobrescribe)</p></li>
+<li><p>A -&gt; Escritura (Agregar al final)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./ruta/del/archiv.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>with:</strong> es un manejador contextual. Controla el flujo de nuestro archivo.</p></li>
+<li><p><strong>open:</strong> función interna para abrir el archivo. Con 2 parámetros, la ruta y el modo de apertura</p></li>
+<li><p><strong>as:</strong> para darle un nombre mas simple al archivo, en este caso es f.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Función para leer un archivo</span>
+<span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./archivos/numbers.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+
+<span class="c1">#Función para escribir un archivo</span>
+<span class="k">def</span> <span class="nf">write</span><span class="p">():</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="s2">&quot;Fernanda&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./archivos/names.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="python-basic.html" class="btn btn-neutral float-left" title="Python Básico" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="python-web-scraping.html" class="btn btn-neutral float-right" title="Web scraping con Python" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2022, Mendoza Nicolás.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
